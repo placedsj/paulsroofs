@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { 
+    scroll-behavior: smooth; 
+  }
+  body { 
+    font-family: 'Roboto', sans-serif; 
+    line-height: 1.6; 
+    color: #a1a1aa;
+    background-color: #18181b;
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale; 
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', serif;
+    color: #f4f4f5;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .hero-bg { 
+    background: linear-gradient(rgba(24, 24, 27, 0.7), rgba(24, 24, 27, 0.7)), 
+                url('https://i.ibb.co/v48V88M7/3metalroofstogetherwaterpaulsai.png') no-repeat center center/cover; 
+  }
+  .text-shadow-outline {
+      text-shadow: 
+          -1px -1px 0 #000,  
+          1px -1px 0 #000,
+          -1px 1px 0 #000,
+          1px 1px 0 #000;
+  }
+  .text-shadow-outline-sm {
+      text-shadow: 
+          -0.5px -0.5px 0 #000,  
+          0.5px -0.5px 0 #000,
+          -0.5px 0.5px 0 #000,
+          0.5px 0.5px 0 #000;
+  }
+  .glass {
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    background: rgba(20,24,28,0.55);
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.08);
+  }
+  .swatch:focus-visible { outline: 3px solid #93c5fd; outline-offset: 3px; }
+  .elevate { transition: transform .2s ease, box-shadow .2s ease; }
+  .elevate:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(0,0,0,.35); }
+}
