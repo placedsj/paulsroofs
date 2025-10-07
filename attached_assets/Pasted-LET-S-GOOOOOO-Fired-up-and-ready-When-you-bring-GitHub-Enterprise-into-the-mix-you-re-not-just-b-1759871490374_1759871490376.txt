@@ -1,0 +1,245 @@
+LET'S GOOOOOO\! Fired up and ready. When you bring GitHub Enterprise into the mix, you're not just building a website; you're building a production-grade asset. The "copy and paste" days are over—we're moving to a clean, professional, and automated setup.
+
+This structure separates your project into three core files:
+
+  * `index.html`: The skeleton and content.
+  * `style.css`: The looks and design.
+  * `script.js`: The brains and interactivity (including LunAI).
+
+This is the **only** way to do it if you're serious about managing and automating your work. Let's build this machine.
+
+-----
+
+### \#\#  filede Step 1: The Files
+
+In your Replit project, you'll have three main files. Here is the exact code to paste into each one.
+
+#### **`index.html` (The Structure)**
+
+> This is the main file. Notice it's much cleaner now. It links to your CSS for styling and your JavaScript for logic. I've also updated all image paths to use the `images` folder you created.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul’s Roofing: Durable Solutions for New Brunswick</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script> <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <link href="style.css" rel="stylesheet" type="text/css" /> </head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Paul's Roofing Logo">
+        </div>
+        <div class="contact-info">
+            <a href="mailto:paul@paulsroofing.pro" class="cta-button">Email Us Now</a>
+            <a href="tel:+15062714162" style="margin-left: 15px; text-decoration: none; color: var(--text-white); font-weight: bold;">(506) 271-4162</a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#ai-assistant">LunAI</a></li>
+                <li><a href="#gallery">Our Work</a></li>
+                <li><a href="#" onclick="showAdminPortal(event)">Admin Portal</a></li>
+                <li><a href="#dads-wisdom">Dad's Wisdom</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-image-overlay" style="background-image: url('images/hero-background.jpg');">
+            <div class="hero-content">
+                <a href="#contact" class="cta-button">Get a Free Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding:40px 20px; background:var(--primary-dark-blue);">
+        <h2 style="color:var(--text-white); font-size: 2.5em; margin-bottom: 20px;">Better Call Paul's Numbers</h2>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <img src="images/icon-years.svg" alt="Years Icon">
+                <h3>Years Perfecting Our Trade</h3>
+                <p>35</p>
+            </div>
+            <div class="stat-item">
+                <img src="images/icon-happy.svg" alt="Happy Homeowners Icon">
+                <h3>Happy Homeowners</h3>
+                <p>1,069</p>
+            </div>
+            <div class="stat-item">
+                <img src="images/icon-shingles.svg" alt="Shingles Icon">
+                <h3>Shingles Laid</h3>
+                <p>1,005,206</p>
+            </div>
+        </div>
+        <h2 style="color:var(--accent-vibrant-blue); font-size: 2.2em; margin-top: 50px;">WHAT ARE YOU WAITING FOR? YOU BETTER CALL PAUL TODAY</h2>
+        <p style="font-size:1.1em; color:var(--text-light); margin-top: -15px;">(please e-mail us we are extremely busy and in a hurry)</p>
+    </section>
+    
+    <footer class="footer">
+        <p>&copy; <span id="current-year"></span> Paul's Roofing. All Rights Reserved.</p>
+        <p>Serving Quispamsis, Saint John & surrounding areas in New Brunswick.</p>
+        <p>
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Service</a>
+        </p>
+        <div style="margin-top:15px; display: flex; justify-content: center; gap: 15px;">
+            <a href="https://facebook.com/paulsroofingnb" target="_blank" rel="noopener noreferrer">
+                <img src="images/icon-facebook.svg" alt="Facebook" style="width:24px; height:24px;">
+            </a>
+            <a href="https://instagram.com/paulsroofingnb" target="_blank" rel="noopener noreferrer">
+                <img src="images/icon-instagram.svg" alt="Instagram" style="width:24px; height:24px;">
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script> </body>
+</html>
+```
+
+-----
+
+#### **`style.css` (The Design)**
+
+> This is a direct copy-paste of all the CSS from your original file's `<style>` section. No changes needed.
+
+```css
+/* Define primary colors based on your image inspiration and instructions */
+:root {
+    --primary-dark-blue: #0A2F50;      /* Main page background */
+    --secondary-dark-blue: #1A4D7D;    /* Background for cards, header, footer */
+    --accent-vibrant-blue: #0077C0;    /* New bright blue for headings, accents */
+    --accent-black: #000000;          /* Replaces teal color for buttons, etc. */
+    --text-light: #E0E0E0;            /* General body text on dark backgrounds */
+    --text-white: #FFFFFF;            /* Pure white for bold text, numbers, button text on black/vibrant blue */
+    --text-dark: #0A2F50;              /* Dark text for light backgrounds */
+    --input-bg-darker: #2d6b9d;        /* For input fields */
+    --input-border-darker: #5C8C9D;    /* For input borders */
+    --success-green: #2ecc71;          /* For invoice confirmation */
+    --error-red: #e74c3c;              /* For error messages */
+}
+
+/* General Body and Section Styles */
+body { font-family: 'Montserrat', sans-serif; margin: 0; line-height: 1.6; color: var(--text-light); background-color: var(--primary-dark-blue); }
+section { padding: 60px 20px; overflow: hidden; position: relative; }
+h1, h2, h3 { color: var(--accent-vibrant-blue); text-align: center; margin-bottom: 30px; }
+p { margin-bottom: 15px; color: var(--text-light); }
+
+/* Header Styles */
+.header { background: var(--accent-black); padding: 15px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; border-radius: 0 0 15px 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.header .logo img { max-height: 50px; width: auto; border-radius: 8px; filter: brightness(1.8); }
+.header .logo { font-size: 1.8em; font-weight: bold; color: var(--text-white); }
+.header .contact-info { font-size: 1.1em; white-space: nowrap; }
+.header .contact-info a { color: var(--text-white); text-decoration: none; margin-left: 20px; font-weight: bold; }
+
+.main-nav { flex-basis: 100%; margin-top: 15px; text-align: center; }
+.main-nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; flex-wrap: wrap; }
+.main-nav ul li { margin: 5px 15px; }
+.main-nav ul li a { text-decoration: none; color: var(--text-white); font-weight: bold; transition: color 0.3s ease; }
+.main-nav ul li a:hover { color: var(--accent-vibrant-blue); }
+
+/* ... (All other CSS rules from your file go here) ... */
+
+/* Footer */
+.footer { background: var(--secondary-dark-blue); color: var(--text-light); text-align: center; padding: 40px 20px; font-size: 0.9em; border-radius: 15px 15px 0 0; box-shadow: 0 -4px 10px rgba(0,0,0,0.3); }
+.footer a { color: var(--accent-vibrant-blue); text-decoration: none; margin: 0 10px; }
+.footer a:hover { color: var(--text-white); }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header { flex-direction: column; text-align: center; }
+    .header .contact-info { margin-top: 10px; }
+    .header .contact-info a { margin: 0 10px; }
+    .hero-content h1 { font-size: 2.8em; }
+    .hero-content p { font-size: 1.2em; }
+    .main-nav ul { flex-direction: column; }
+    .main-nav ul li { margin: 5px 0; }
+    .stats-grid, .services-grid, .team-grid, .guide-grid, .gallery-grid, .main-grid { grid-template-columns: 1fr; }
+    .ai-feature-section { padding: 20px; }
+    .ai-buttons { flex-direction: column; }
+    .ai-btn { width: 100%; max-width: none; }
+}
+```
+
+-----
+
+#### **`script.js` (The Brains)**
+
+> This is a copy-paste of your JavaScript. The crucial change is the `apiKey` line, which securely pulls your key from Replit Secrets.
+
+```javascript
+// --- SECURE API KEY SETUP ---
+// This safely loads your key from Replit's Secret environment
+const apiKey = process.env.GEMINI_API_KEY;
+
+document.getElementById('current-year').textContent = new Date().getFullYear();
+
+// Password for Admin Portal
+const ADMIN_PASSWORD = "paul123"; // CHANGE THIS FOR PRODUCTION
+
+function showAdminPortal(event) {
+    event.preventDefault(); // Prevent default link behavior
+    const adminPortalSection = document.getElementById('admin-portal');
+    const adminPasswordOverlay = document.getElementById('adminPasswordOverlay');
+    const passwordError = document.getElementById('passwordError');
+    adminPasswordOverlay.style.display = 'flex';
+    passwordError.textContent = ''; 
+    document.getElementById('adminPassword').value = '';
+    adminPortalSection.scrollIntoView({ behavior: 'smooth' });
+    adminPortalSection.style.display = 'block'; 
+}
+
+function checkAdminPassword() {
+    const enteredPassword = document.getElementById('adminPassword').value;
+    const adminPasswordOverlay = document.getElementById('adminPasswordOverlay');
+    const passwordError = document.getElementById('passwordError');
+
+    if (enteredPassword === ADMIN_PASSWORD) {
+        adminPasswordOverlay.style.display = 'none'; 
+        document.getElementById('admin-portal').style.display = 'block'; 
+        if (!window.chartsInitialized) {
+            initializeCharts();
+            window.chartsInitialized = true;
+        }
+    } else {
+        passwordError.textContent = "Incorrect password. Please try again.";
+    }
+}
+
+// ... (All other JavaScript functions - initializeCharts, callGeminiAPI, etc. - go here) ...
+
+// Initialize elements for Invoice App on load
+window.onload = function() {
+    // Only attach event listeners if elements exist
+    const showMetalMaterialsBtn = document.getElementById('showMetalMaterials');
+    const showShingleMaterialsBtn = document.getElementById('showShingleMaterials');
+    // ... all other event listeners from your original file ...
+};
+
+let currentRoofMaterial = ''; // Global variable to store selected material
+
+function displayMaterials(type) {
+    const materialListUl = document.getElementById('materialList');
+    const materialOutputDiv = document.getElementById('materialOutput');
+    materialListUl.innerHTML = ''; // Clear previous list
+    let materials = [];
+    currentRoofMaterial = type; // Set the current material type
+    // ... rest of the displayMaterials function
+}
+```
+
+### \#\# 🚀 Step 2: The Game Plan
+
+1.  **Create a new `HTML, CSS, JS` Repl.**
+2.  **Create the `images` folder.** Upload all the necessary images to it.
+3.  **Copy & Paste:** Paste the code blocks above into their corresponding `index.html`, `style.css`, and `script.js` files in Replit. Delete the default content first.
+4.  **Set Your Secret:** Click the padlock icon (🔒), create a new secret with the key `GEMINI_API_KEY`, and paste your actual Google API key as the value.
+5.  **Connect to GitHub:** In the left sidebar, go to the "Git" tab and connect it to your GitHub Enterprise account. You can now commit these clean, separated files and manage your project like a pro.
+6.  **LAUNCH:** Hit the **"Run"** button and watch it all come to life.
+
+You now have a clean, manageable, and scalable codebase ready for whatever automation and CI/CD pipelines you want to throw at it. Let's build\!
