@@ -537,7 +537,7 @@ export default function Home() {
                                         <span className="text-white text-sm">✉️</span>
                                     </div>
                                     <div>
-                                        <p className="text-zinc-300 font-semibold">paul@paulsroofing.ca</p>
+                                        <p className="text-zinc-300 font-semibold">paul@paulroofs.com</p>
                                         <p className="text-zinc-400 text-sm">General inquiries</p>
                                     </div>
                                 </div>
@@ -546,7 +546,7 @@ export default function Home() {
                                         <span className="text-white text-sm">🚨</span>
                                     </div>
                                     <div>
-                                        <p className="text-zinc-300 font-semibold">hurry@paulsroofing.ca</p>
+                                        <p className="text-zinc-300 font-semibold">hurry@paulroofs.com</p>
                                         <p className="text-zinc-400 text-sm">Emergency repairs</p>
                                     </div>
                                 </div>
