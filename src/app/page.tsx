@@ -399,6 +399,7 @@ export default function Home() {
     // New Color Variables for consistent look
     const ACCENT_BLUE = '#1E54A3';
     const RED_DANGER = '#ef4444';
+    const CHECK_GREEN = '#2ecc71';
 
     // Simple password protection
     const BOSS_PASSWORD = "paul2025";
