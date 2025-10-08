@@ -39,8 +39,33 @@ export default function HandbookPage() {
                     </ul>
                 </div>
 
+                {/* --- Dad's Jokes Section --- */}
+                <div className="bg-gradient-to-r from-orange-900/20 to-zinc-800/50 border border-orange-500/30 rounded-xl p-8 mb-16">
+                    <h2 className="text-3xl font-extrabold text-orange-500 mb-6 text-center">😂 Dad's Roofing Jokes</h2>
+                    <p className="text-center text-zinc-400 mb-8">Because even roofing should have a sense of humor! Share these with your crew.</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                        <div className="bg-zinc-900/80 p-6 rounded-lg border border-zinc-700">
+                            <p className="text-zinc-300 text-lg mb-2">What's a roofer's favorite candy?</p>
+                            <p className="text-orange-500 font-bold text-xl">...Shingles! 🍫</p>
+                        </div>
+                        <div className="bg-zinc-900/80 p-6 rounded-lg border border-zinc-700">
+                            <p className="text-zinc-300 text-lg mb-2">Why did the shingle break up with the wood sheathing?</p>
+                            <p className="text-orange-500 font-bold text-xl">...Because he felt too much pressure! 💔</p>
+                        </div>
+                        <div className="bg-zinc-900/80 p-6 rounded-lg border border-zinc-700">
+                            <p className="text-zinc-300 text-lg mb-2">How many roofers does it take to change a lightbulb?</p>
+                            <p className="text-orange-500 font-bold text-xl">...None, we work better in the dark! 💡</p>
+                        </div>
+                        <div className="bg-zinc-900/80 p-6 rounded-lg border border-zinc-700">
+                            <p className="text-zinc-300 text-lg mb-2">Why did the roof go to therapy?</p>
+                            <p className="text-orange-500 font-bold text-xl">...It had too many issues up top! 😅</p>
+                        </div>
+                    </div>
+                    <p className="text-center text-zinc-400 mt-6 text-sm">Got a better one? Share it on our Facebook page! #BetterCallPaul</p>
+                </div>
+
                 {/* --- Dynamic Blog/Resource Post Grid --- */}
-                <h2 className="text-4xl font-extrabold text-zinc-50 mb-10 text-center border-b border-orange-500 pb-3">Roofing Articles & Guides</h2>
+                <h2 className="text-4xl font-extrabold text-zinc-50 mb-10 text-center border-b border-orange-500 pb-3">Dad's Fix of the Week: Roofing Articles & Guides</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {posts.map((post) => (
                         <Link href={`/handbook/${post.slug}`} key={post.slug} legacyBehavior>
