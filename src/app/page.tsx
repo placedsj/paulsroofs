@@ -445,16 +445,28 @@ export default function Home() {
     const RED_DANGER = '#ef4444';
     const CHECK_GREEN = '#2ecc71';
 
-    // Simple password protection
-    const BOSS_PASSWORD = "paul2025";
-    
-    const handlePasswordSubmit = (e: React.FormEvent) => {
+    // Server-side password authentication
+    const handlePasswordSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (passwordAttempt === BOSS_PASSWORD) {
-            setIsAuthenticated(true);
-            setShowBossQuarters(true);
-        } else {
-            alert('INCORRECT PASSWORD');
+        
+        try {
+            const response = await fetch('/api/auth/boss', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ password: passwordAttempt })
+            });
+            
+            const data = await response.json();
+            
+            if (data.authenticated) {
+                setIsAuthenticated(true);
+                setShowBossQuarters(true);
+            } else {
+                alert('INCORRECT PASSWORD');
+                setPasswordAttempt('');
+            }
+        } catch (error) {
+            alert('Authentication error. Please try again.');
             setPasswordAttempt('');
         }
     };
