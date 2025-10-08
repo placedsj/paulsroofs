@@ -2,6 +2,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function VisualizerPage() {
     const [selectedService, setSelectedService] = useState('metal');
@@ -81,13 +82,19 @@ export default function VisualizerPage() {
     
     useEffect(() => {
         if (['metal', 'shingles'].includes(selectedService)) {
-            setSelectedRoofColor(initialRoofColor);
+            const newColor = roofingPalettes[selectedService as 'metal' | 'shingles']?.colors[0];
+            if (newColor) {
+                setSelectedRoofColor(newColor);
+            }
         }
-    }, [selectedService, initialRoofColor]);
+    }, [selectedService]);
 
     useEffect(() => {
-        setSelectedSidingColor(initialSidingColor);
-    }, [selectedSidingBrand, initialSidingColor]);
+        const newColor = sidingPalettes[selectedSidingBrand as 'mittenVinyl' | 'hardieBoard' | 'hardieShingle']?.colors[0];
+        if (newColor) {
+            setSelectedSidingColor(newColor);
+        }
+    }, [selectedSidingBrand]);
 
 
     const SidingVisualizer = () => (
@@ -251,7 +258,15 @@ export default function VisualizerPage() {
              <nav className="fixed top-0 left-0 right-0 bg-zinc-900/95 backdrop-blur-sm border-b border-zinc-700 z-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center py-4">
-                        <a href="/" className="text-2xl font-bold text-zinc-50">PAUL'S ROOFING</a>
+                        <a href="/" className="h-12 flex items-center hover:opacity-80 transition-opacity">
+                            <Image
+                                src="/assets/paulslogo.png"
+                                alt="Paul's Roofing Logo"
+                                width={180}
+                                height={48}
+                                className="h-12 w-auto"
+                            />
+                        </a>
                         <div className="hidden md:flex space-x-8">
                             <a href="/" className="text-zinc-400 hover:text-orange-500 transition-colors">HOME</a>
                             <a href="/#services" className="text-zinc-400 hover:text-orange-500 transition-colors">SERVICES</a>

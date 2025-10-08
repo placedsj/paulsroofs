@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useCallback } from 'react';
+import Image from 'next/image';
 import { ContactForm } from '@/components/ContactForm';
 
 // Since this is a single file, we define all components here.
@@ -383,7 +384,16 @@ const BossQuarters = ({ onLogout }: {onLogout: () => void}) => {
 
             {/* Footer - Updated to Dark Card Style */}
             <footer className="mt-12 w-full max-w-5xl text-center text-white text-lg p-4 rounded-lg shadow-lg" style={{ backgroundColor: ACCENT_BLUE }}>
-                <p className="font-bold">PAUL'S ROOFING BOSS QUARTERS</p>
+                <div className="flex justify-center mb-2">
+                    <Image
+                        src="/assets/paulslogo.png"
+                        alt="Paul's Roofing Logo"
+                        width={150}
+                        height={40}
+                        className="h-10 w-auto"
+                    />
+                </div>
+                <p className="font-bold">BOSS QUARTERS</p>
                 <p className="text-sm mt-2 text-blue-100">Secure Administrative Access | User ID: {userId}</p>
             </footer>
         </div>
@@ -432,7 +442,15 @@ export default function Home() {
             <nav className="fixed top-0 left-0 right-0 bg-zinc-900/95 backdrop-blur-sm border-b border-zinc-700 z-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center py-4">
-                        <div className="text-2xl font-bold text-zinc-50">PAUL'S ROOFING</div>
+                        <div className="h-12 flex items-center">
+                            <Image
+                                src="/assets/paulslogo.png"
+                                alt="Paul's Roofing Logo"
+                                width={180}
+                                height={48}
+                                className="h-12 w-auto"
+                            />
+                        </div>
                         <div className="hidden md:flex space-x-8">
                             <a href="#home" className="text-zinc-400 hover:text-zinc-50 transition-colors">HOME</a>
                             <a href="#services" className="text-zinc-400 hover:text-zinc-50 transition-colors">SERVICES</a>
@@ -613,7 +631,13 @@ export default function Home() {
             <footer className="bg-zinc-900 border-t border-zinc-700 py-12">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center">
-                        <h3 className="text-2xl font-bold text-zinc-50 mb-4">PAUL'S ROOFING</h3>
+                        <Image
+                            src="/assets/paulslogo.png"
+                            alt="Paul's Roofing Logo"
+                            width={180}
+                            height={48}
+                            className="h-12 w-auto mx-auto mb-4"
+                        />
                         <p className="text-zinc-400 mb-4">Southern New Brunswick's Premier Metal Roofing Specialist</p>
                         <p className="text-zinc-500 text-sm">
                             © 2025 Paul's Roofing. All rights reserved. | Licensed & Insured

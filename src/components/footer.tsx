@@ -7,11 +7,11 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <Image
-            src="/images/logo-round.png"
+            src="/assets/paulslogo.png"
             alt="Paul's Roofing Logo"
-            width={48}
-            height={48}
-            className="h-12 mx-auto mb-4"
+            width={150}
+            height={40}
+            className="h-10 w-auto mx-auto mb-4"
           />
           <p className="text-zinc-400 mb-4">
             Southern New Brunswick's Premier Metal Roofing Specialist

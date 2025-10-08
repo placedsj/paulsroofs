@@ -19,8 +19,14 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         {/* Header */}
         <div className="bg-zinc-800 border-b border-zinc-700">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-                <Link href="/" className="text-2xl font-bold text-zinc-50">
-                    PAUL'S ROOFING
+                <Link href="/" className="h-12 flex items-center hover:opacity-80 transition-opacity">
+                    <Image
+                        src="/assets/paulslogo.png"
+                        alt="Paul's Roofing Logo"
+                        width={180}
+                        height={48}
+                        className="h-12 w-auto"
+                    />
                 </Link>
                 <Link href="/blog" className="text-zinc-400 hover:text-orange-500 transition-colors">
                     Back to Blog
