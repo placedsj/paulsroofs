@@ -457,7 +457,7 @@ export default function Home() {
                         <div className="hidden md:flex space-x-8">
                             <a href="#home" className="text-zinc-400 hover:text-zinc-50 transition-colors">HOME</a>
                             <a href="#services" className="text-zinc-400 hover:text-zinc-50 transition-colors">SERVICES</a>
-                            <a href="/visualizer" className="text-zinc-400 hover:text-zinc-50 transition-colors">VISUALIZER</a>
+                            <a href="/materials" className="text-zinc-400 hover:text-zinc-50 transition-colors">MATERIALS</a>
                             <a href="/handbook" className="text-zinc-400 hover:text-zinc-50 transition-colors">HANDBOOK</a>
                             <a href="#about" className="text-zinc-400 hover:text-zinc-50 transition-colors">ABOUT</a>
                             <a href="#contact" className="text-zinc-400 hover:text-zinc-50 transition-colors">CONTACT</a>

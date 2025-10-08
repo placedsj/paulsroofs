@@ -30,8 +30,8 @@ export function Header() {
             <Link href="/christmas-lights" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">
               🎄 LIGHTS
             </Link>
-            <Link href="/visualizer" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">
-              VISUALIZER
+            <Link href="/materials" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">
+              MATERIALS GUIDE
             </Link>
             <Link href="/handbook" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">
               HANDBOOK

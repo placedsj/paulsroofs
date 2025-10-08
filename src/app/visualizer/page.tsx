@@ -1,6 +1,23 @@
 
 "use client";
 
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+
+export default function VisualizerRedirect() {
+  const router = useRouter();
+  
+  useEffect(() => {
+    router.replace('/materials');
+  }, [router]);
+  
+  return null;
+}
+
+/*
+// OLD VISUALIZER CODE - Replaced with Materials Guide
+"use client";
+
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
