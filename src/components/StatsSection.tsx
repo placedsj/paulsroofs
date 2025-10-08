@@ -9,7 +9,7 @@ export function StatsSection() {
         {/* Tagline */}
         <div className="text-center mb-16">
           <h3 className="text-3xl md:text-4xl font-bold text-zinc-50 mb-4">
-            Old School Workers, New School Work
+            Experience You Trust, Innovation You Love
           </h3>
           <p className="text-2xl font-bold" style={{ color: '#1E54A3' }}>#35YearsStrong</p>
         </div>
