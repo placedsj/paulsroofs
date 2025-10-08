@@ -4,6 +4,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { ContactForm } from '@/components/ContactForm';
 import { ReviewsSection } from '@/components/ReviewsSection';
+import { StatsSection } from '@/components/StatsSection';
 
 // Since this is a single file, we define all components here.
 
@@ -473,11 +474,18 @@ export default function Home() {
             {/* Hero Section - The top banner in the image */}
             <section id="home" className="hero-bg min-h-screen flex items-center justify-center pt-20">
                 <div className="bg-black/50 p-8 md:p-12 rounded-lg text-center shadow-2xl max-w-4xl">
+                    <div className="text-orange-500 font-bold text-xl md:text-2xl mb-4">#BetterCallPaul</div>
                     <h1 className="text-5xl md:text-7xl font-extrabold text-zinc-50 mb-6" style={{ letterSpacing: '-0.05em', lineHeight: '1.1' }}>
-                        DURABLE SOLUTIONS. LASTING PEACE OF MIND.
+                        READY TO PROTECT YOUR BIGGEST INVESTMENT?
                     </h1>
-                    <p className="text-lg md:text-xl text-zinc-300 mb-4">
-                        Serving Quispamsis, Saint John, and surrounding areas in New Brunswick with 30+ years of expertise.
+                    <p className="text-lg md:text-xl text-zinc-300 mb-2">
+                        Southern New Brunswick's one-stop for metal roofing, shingles, and solar.
+                    </p>
+                    <p className="text-xl md:text-2xl font-bold text-zinc-50 mb-8">
+                        Trusted for over 35 years.
+                    </p>
+                    <p className="text-lg text-orange-400 font-semibold mb-8">
+                        Will yours be next?
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
                         <a 
@@ -485,11 +493,14 @@ export default function Home() {
                             className="text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors hover:opacity-90"
                             style={{ backgroundColor: ACCENT_BLUE }}
                         >
-                            BOOK YOUR FREE CONSULTATION TODAY
+                            GET A QUOTE
                         </a>
                     </div>
                 </div>
             </section>
+
+            {/* Stats Section */}
+            <StatsSection />
 
             {/* Services Section */}
             <ServicesSection />
