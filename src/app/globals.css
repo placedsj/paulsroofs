@@ -7,7 +7,7 @@
     scroll-behavior: smooth; 
   }
   body { 
-    font-family: 'Roboto', sans-serif; 
+    font-family: var(--font-roboto), sans-serif; 
     line-height: 1.6; 
     color: #a1a1aa;
     background-color: #18181b;
@@ -15,7 +15,7 @@
     -moz-osx-font-smoothing: grayscale; 
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto Slab', serif;
+    font-family: var(--font-roboto-slab), serif;
     color: #f4f4f5;
     text-transform: uppercase;
     letter-spacing: 0.05em;

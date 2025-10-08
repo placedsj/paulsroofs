@@ -1,5 +1,20 @@
 import type { Metadata } from 'next';
+import { Roboto, Roboto_Slab } from 'next/font/google';
 import './globals.css';
+
+const roboto = Roboto({
+  weight: ['400', '500'],
+  subsets: ['latin'],
+  variable: '--font-roboto',
+  display: 'swap',
+});
+
+const robotoSlab = Roboto_Slab({
+  weight: ['700', '800'],
+  subsets: ['latin'],
+  variable: '--font-roboto-slab',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: "Paul's Roofing - Southern NB Specialist",
@@ -12,13 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Roboto+Slab:wght@700;800&display=swap" rel="stylesheet" />
-      </head>
-      <body>
+    <html lang="en" className={`${roboto.variable} ${robotoSlab.variable}`}>
+      <body className={roboto.className}>
         {children}
       </body>
     </html>
