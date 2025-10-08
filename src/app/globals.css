@@ -21,8 +21,8 @@
     letter-spacing: 0.05em;
   }
   .hero-bg { 
-    background: linear-gradient(rgba(24, 24, 27, 0.6), rgba(24, 24, 27, 0.6)), 
-                url('/hero-home.jpg') no-repeat center center/cover; 
+    background: linear-gradient(rgba(24, 24, 27, 0.5), rgba(24, 24, 27, 0.5)), 
+                url('/hero-home-farmhouse.jpg') no-repeat center center/cover; 
   }
   .text-shadow-outline {
       text-shadow: 

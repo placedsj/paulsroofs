@@ -250,10 +250,20 @@ export default function MaterialsGuide() {
               SIDING & EXTERIORS
             </h2>
             <p className="text-2xl font-bold text-orange-500 mb-4">Mitten Siding</p>
-            <p className="text-lg text-zinc-300 max-w-3xl mx-auto">
+            <p className="text-lg text-zinc-300 max-w-3xl mx-auto mb-8">
               Complete your home's exterior with premium Mitten vinyl siding. Low maintenance, high curb appeal, 
               sourced locally for quality you can trust.
             </p>
+            
+            {/* Siding Image */}
+            <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden mb-8">
+              <Image
+                src="/siding-garage.jpg"
+                alt="Quality Siding Installation"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
