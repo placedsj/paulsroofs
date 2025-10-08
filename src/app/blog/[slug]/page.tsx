@@ -2,14 +2,15 @@ import { posts } from '../../../lib/posts';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
-  const post = posts.find((p) => p.slug === params.slug);
+export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = posts.find((p) => p.slug === slug);
 
   if (!post) {
     return (
         <div className="bg-zinc-900 min-h-screen text-center py-20">
             <h1 className="text-4xl font-bold text-zinc-50">Post not found</h1>
-            <Link href="/blog" className="text-orange-500 hover:underline mt-4 inline-block">Back to Blog</Link>
+            <Link href="/handbook" className="hover:underline mt-4 inline-block" style={{ color: '#1E54A3' }}>Back to Handbook</Link>
         </div>
     );
   }
@@ -19,17 +20,17 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         {/* Header */}
         <div className="bg-zinc-800 border-b border-zinc-700">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-                <Link href="/" className="h-12 flex items-center hover:opacity-80 transition-opacity">
+                <Link href="/" className="h-16 flex items-center hover:opacity-80 transition-opacity">
                     <Image
                         src="/assets/paulslogo-official.png"
                         alt="Paul's Roofing Logo"
-                        width={180}
-                        height={48}
-                        className="h-12 w-auto"
+                        width={240}
+                        height={64}
+                        className="h-16 w-auto"
                     />
                 </Link>
-                <Link href="/blog" className="text-zinc-400 hover:text-orange-500 transition-colors">
-                    Back to Blog
+                <Link href="/handbook" className="text-zinc-400 transition-colors hover:opacity-90" style={{ color: '#1E54A3' }}>
+                    Back to Handbook
                 </Link>
             </div>
         </div>
@@ -43,9 +44,9 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                     <Image
                         src={post.imageUrl}
                         alt={post.title}
-                        layout="fill"
-                        objectFit="cover"
-                        priority // Prioritize loading the main blog image
+                        fill
+                        style={{ objectFit: 'cover' }}
+                        priority
                     />
                 </div>
 

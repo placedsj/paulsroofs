@@ -68,8 +68,8 @@ export default function HandbookPage() {
                 <h2 className="text-4xl font-extrabold text-zinc-50 mb-10 text-center border-b border-orange-500 pb-3">Dad's Fix of the Week: Roofing Articles & Guides</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {posts.map((post) => (
-                        <Link href={`/handbook/${post.slug}`} key={post.slug} legacyBehavior>
-                            <div className="bg-zinc-800 rounded-lg overflow-hidden group border border-zinc-700 hover:border-orange-600 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                        <Link href={`/blog/${post.slug}`} key={post.slug} legacyBehavior>
+                            <div className="bg-zinc-800 rounded-lg overflow-hidden group border border-zinc-700 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer" style={{ borderColor: 'rgba(30, 84, 163, 0.3)' }}>
                                 <div className="relative w-full h-48">
                                     <Image
                                         src={post.imageUrl}
@@ -80,7 +80,7 @@ export default function HandbookPage() {
                                     />
                                 </div>
                                 <div className="p-6">
-                                    <h3 className="text-2xl font-bold text-zinc-50 mb-2 group-hover:text-orange-500 transition-colors">{post.title}</h3>
+                                    <h3 className="text-2xl font-bold text-zinc-50 mb-2 transition-colors" style={{ color: 'inherit' }}>{post.title}</h3>
                                     <p className="text-zinc-400 line-clamp-3">{post.excerpt}</p>
                                 </div>
                             </div>
