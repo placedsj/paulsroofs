@@ -20,24 +20,24 @@ export function ProjectGallery() {
     {
       id: 3,
       title: "Modern Residential Project",
-      image: "/IMG_20250927_235341_741.jpg",
+      image: "/hero-home-farmhouse.jpg",
       description: "Complete roofing solution for modern homes"
     },
     {
       id: 4,
       title: "Quality Workmanship",
-      image: "/IMG_20250927_235341_771.jpg",
+      image: "/gallery-inspection.jpg",
       description: "Expert installation with attention to detail"
     },
     {
       id: 5,
-      title: "Professional Installation",
-      image: "/IMG_20250927_235510_845.jpg",
-      description: "Trusted by homeowners across Southern NB"
+      title: "Shingle Roof Excellence",
+      image: "/gallery-shingle-roof.jpg",
+      description: "Premium IKO Dynasty shingle installation"
     },
     {
       id: 6,
-      title: "Superior Roofing Solutions",
+      title: "Professional Craftsmanship",
       image: "/IMG_20250927_235510_860.jpg",
       description: "Built to last with premium materials"
     }
