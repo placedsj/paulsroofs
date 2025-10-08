@@ -16,12 +16,12 @@ export function Footer() {
           <p className="text-zinc-400 mb-4">
             Southern New Brunswick's Premier Metal Roofing Specialist
           </p>
-          <div className="flex justify-center space-x-6 mb-4">
-            <Link href="/" className="text-zinc-400 hover:text-blue-600 transition-colors text-sm">HOME</Link>
-            <Link href="/exterior-inspection" className="text-zinc-400 hover:text-blue-600 transition-colors text-sm">INSPECTION</Link>
-            <Link href="/christmas-lights" className="text-zinc-400 hover:text-blue-600 transition-colors text-sm">🎄 LIGHTS</Link>
-            <Link href="/handbook" className="text-zinc-400 hover:text-blue-600 transition-colors text-sm">RESOURCES</Link> 
-            <Link href="/boss-quarters" className="text-zinc-400 hover:text-blue-600 transition-colors text-sm">STAFF</Link>
+          <div className="flex justify-center space-x-4 mb-6">
+            <Link href="/" className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90" style={{ backgroundColor: '#1E54A3' }}>HOME</Link>
+            <Link href="/exterior-inspection" className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90" style={{ backgroundColor: '#1E54A3' }}>INSPECTION</Link>
+            <Link href="/christmas-lights" className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90" style={{ backgroundColor: '#1E54A3' }}>🎄 LIGHTS</Link>
+            <Link href="/handbook" className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90" style={{ backgroundColor: '#1E54A3' }}>RESOURCES</Link> 
+            <Link href="/boss-quarters" className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90" style={{ backgroundColor: '#1E54A3' }}>STAFF</Link>
           </div>
           <p className="text-zinc-400 mb-2">
             Contact:{" "}

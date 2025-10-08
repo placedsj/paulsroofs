@@ -60,6 +60,17 @@ const ServicesSection = () => {
                             SIDING
                         </button>
                         <button
+                            onClick={() => setSelectedService('gutters')}
+                            className={`px-6 py-3 rounded-md font-bold transition-colors ${
+                                selectedService === 'gutters' 
+                                    ? `bg-[${ACCENT_BLUE}] text-white shadow-lg` 
+                                    : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800'
+                            }`}
+                            style={{ backgroundColor: selectedService === 'gutters' ? ACCENT_BLUE : '' }}
+                        >
+                            GUTTER CLEANING
+                        </button>
+                        <button
                             onClick={() => setSelectedService('other')}
                             className={`px-6 py-3 rounded-md font-bold transition-colors ${
                                 selectedService === 'other' 
@@ -74,7 +85,26 @@ const ServicesSection = () => {
                 </div>
 
                 {/* Service Content */}
-                {selectedService === 'other' ? (
+                {selectedService === 'gutters' ? (
+                    <div className="space-y-8">
+                        <div className="bg-zinc-800 p-8 rounded-lg border border-zinc-700 shadow-xl">
+                             <h3 className="text-3xl font-bold text-zinc-50 mb-4">
+                                PROFESSIONAL GUTTER CLEANING & MAINTENANCE
+                            </h3>
+                            <p className="text-zinc-400 text-lg mb-6">
+                                Keep your home protected with our comprehensive gutter cleaning and maintenance services. Prevent water damage, foundation issues, and ice dams with regular professional cleaning.
+                            </p>
+                            <div className="grid md:grid-cols-3 gap-4 text-zinc-300 list-none">
+                                <div><span style={{ color: CHECK_GREEN }}>•</span> Complete Gutter Cleaning</div>
+                                <div><span style={{ color: CHECK_GREEN }}>•</span> Downspout Clearing</div>
+                                <div><span style={{ color: CHECK_GREEN }}>•</span> Debris Removal</div>
+                                <div><span style={{ color: CHECK_GREEN }}>•</span> Gutter Inspection</div>
+                                <div><span style={{ color: CHECK_GREEN }}>•</span> Minor Repairs</div>
+                                <div><span style={{ color: CHECK_GREEN }}>•</span> Seasonal Maintenance</div>
+                            </div>
+                        </div>
+                    </div>
+                ) : selectedService === 'other' ? (
                      <div className="grid md:grid-cols-2 gap-8">
                         <div className="bg-zinc-800 p-8 rounded-lg border border-zinc-700 shadow-xl">
                             <h3 className="text-2xl font-bold text-zinc-50 mb-4">ROOF REPAIRS</h3>
