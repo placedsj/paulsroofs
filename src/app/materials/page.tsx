@@ -15,14 +15,26 @@ export default function MaterialsGuide() {
       
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-gradient-to-b from-zinc-800 to-zinc-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold text-zinc-50 mb-6">
-            PAUL'S GUIDE TO PREMIUM MATERIALS
-          </h1>
-          <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-            Your trusted local expert for the best roofing and exterior materials built for New Brunswick weather. 
-            We've partnered with industry leaders to bring you quality that lasts.
-          </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h1 className="text-5xl font-bold text-zinc-50 mb-6">
+              PAUL'S GUIDE TO PREMIUM MATERIALS
+            </h1>
+            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
+              Your trusted local expert for the best roofing and exterior materials built for New Brunswick weather. 
+              We've partnered with industry leaders to bring you quality that lasts.
+            </p>
+          </div>
+          
+          {/* Hero Image */}
+          <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden mt-8">
+            <Image
+              src="/materials-color-samples.jpg"
+              alt="Premium Roofing Material Samples"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       </section>
 
@@ -149,10 +161,20 @@ export default function MaterialsGuide() {
               METAL ROOFING: LOCAL & DURABLE
             </h2>
             <p className="text-2xl font-bold text-orange-500 mb-4">Community Metal New Brunswick & Dairytown Exteriors</p>
-            <p className="text-lg text-zinc-300 max-w-3xl mx-auto">
+            <p className="text-lg text-zinc-300 max-w-3xl mx-auto mb-8">
               Built in New Brunswick, for New Brunswick weather. Our partnerships with Community Metal and Dairytown Exteriors (Sussex) ensure you get 
               premium metal roofing designed specifically for our coastal climate.
             </p>
+            
+            {/* Metal Roof Image */}
+            <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden">
+              <Image
+                src="/materials-metal-roof.jpg"
+                alt="Standing Seam Metal Roof Installation"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
 
           {/* Metal Profiles */}
