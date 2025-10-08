@@ -62,11 +62,14 @@ export default function ExteriorInspectionPage() {
           </div>
           <div className="relative z-10 text-center px-4">
             <h1 className="text-5xl md:text-6xl font-bold text-zinc-50 mb-4">
-              FREE VISUAL EXTERIOR INSPECTION
+              VISUAL EXTERIOR INSPECTION
             </h1>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
+            <p className="text-xl text-zinc-300 max-w-3xl mx-auto mb-4">
               Professional assessment of your roof, siding, and gutters - no obligation
             </p>
+            <div className="inline-block bg-orange-600 px-6 py-2 rounded-lg">
+              <p className="text-white font-bold">🚁 COMING SOON 2026: Aerial Inspections with Heat Loss Detection</p>
+            </div>
           </div>
         </section>
 
@@ -116,7 +119,7 @@ export default function ExteriorInspectionPage() {
         <section className="py-16 bg-zinc-900">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold text-center text-zinc-50 mb-8">
-              Schedule Your Free Inspection
+              Schedule Your Inspection
             </h2>
             <p className="text-center text-zinc-400 mb-12">
               We'll visit your property, perform a thorough visual inspection, and provide you with a detailed report

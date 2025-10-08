@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export function Footer() {
   return (
-    <footer className="bg-zinc-900 border-t border-zinc-700 py-12">
+    <footer className="border-t border-zinc-700 py-12" style={{ backgroundColor: '#0a1628' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <Image
@@ -18,6 +18,8 @@ export function Footer() {
           </p>
           <div className="flex justify-center space-x-6 mb-4">
             <Link href="/" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">HOME</Link>
+            <Link href="/exterior-inspection" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">INSPECTION</Link>
+            <Link href="/christmas-lights" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">🎄 LIGHTS</Link>
             <Link href="/handbook" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">RESOURCES</Link> 
             <Link href="/boss-quarters" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">STAFF</Link>
           </div>

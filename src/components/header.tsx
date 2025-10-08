@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export function Header() {
   return (
-    <nav className="sticky top-0 left-0 right-0 bg-zinc-900/95 backdrop-blur-sm border-b border-zinc-700 z-50">
+    <nav className="sticky top-0 left-0 right-0 backdrop-blur-sm border-b border-zinc-700 z-50" style={{ backgroundColor: '#0a1628' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="h-12 flex items-center">
@@ -23,12 +23,6 @@ export function Header() {
             </Link>
             <Link href="/#services" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">
               SERVICES
-            </Link>
-            <Link href="/exterior-inspection" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">
-              INSPECTION
-            </Link>
-            <Link href="/christmas-lights" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">
-              🎄 LIGHTS
             </Link>
             <Link href="/materials" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">
               MATERIALS GUIDE
