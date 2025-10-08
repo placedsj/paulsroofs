@@ -11,6 +11,7 @@ export function ContactForm() {
     phone: '',
     address: '',
     timeframe: '',
+    preferredContact: '',
     message: ''
   });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -34,7 +35,7 @@ export function ContactForm() {
 
       if (response.ok) {
         setStatus('success');
-        setFormData({ name: '', email: '', phone: '', address: '', timeframe: '', message: '' });
+        setFormData({ name: '', email: '', phone: '', address: '', timeframe: '', preferredContact: '', message: '' });
         setTimeout(() => setStatus('idle'), 5000); // Reset after 5 seconds
       } else {
         setStatus('error');
@@ -125,6 +126,20 @@ export function ContactForm() {
           <option value="fall">Fall</option>
           <option value="winter">Winter</option>
         </select>
+        <select
+          name="preferredContact"
+          value={formData.preferredContact}
+          onChange={handleChange}
+          required
+          disabled={status === 'submitting'}
+          className="w-full p-3 bg-zinc-700 border border-zinc-600 rounded text-zinc-100 disabled:opacity-50"
+        >
+          <option value="">Preferred Method of Contact</option>
+          <option value="phone">Phone Call</option>
+          <option value="email">Email</option>
+          <option value="text">Text Message</option>
+          <option value="any">Any Method</option>
+        </select>
         <textarea
           name="message"
           placeholder="Describe your roofing needs..."
@@ -141,7 +156,7 @@ export function ContactForm() {
           className="w-full text-white py-3 rounded font-bold transition-colors hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
           style={{ backgroundColor: ACCENT_BLUE }}
         >
-          {status === 'submitting' ? 'SENDING...' : 'SEND REQUEST'}
+          {status === 'submitting' ? 'SENDING...' : 'WILL YOURS BE NEXT?'}
         </button>
       </form>
     </div>

@@ -512,7 +512,7 @@ export default function Home() {
                         <div>
                             <h2 className="text-4xl font-bold text-zinc-50 mb-8">30 YEARS OF EXCELLENCE</h2>
                             <p className="text-zinc-400 text-lg mb-6">
-                                Based in Quispamsis, New Brunswick, Paul's Roofing has been the trusted choice for homeowners throughout Southern NB for three decades.
+                                Based in Southern New Brunswick, Paul's Roofing has been the trusted choice for homeowners throughout the region for three decades.
                             </p>
                             <p className="text-zinc-400 text-lg mb-6">
                                 We specialize in premium metal roofing systems that are engineered to last a lifetime, backed by comprehensive warranties and expert craftsmanship.
@@ -590,7 +590,7 @@ export default function Home() {
                                         <span className="text-white text-sm">📍</span>
                                     </div>
                                     <div>
-                                        <p className="text-zinc-300 font-semibold">Quispamsis, New Brunswick</p>
+                                        <p className="text-zinc-300 font-semibold">Southern New Brunswick</p>
                                         <p className="text-zinc-400 text-sm">Serving all of Southern NB</p>
                                     </div>
                                 </div>

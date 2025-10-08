@@ -8,6 +8,7 @@ export const contactSubmissions = pgTable('contact_submissions', {
   phone: varchar('phone', { length: 50 }),
   address: text('address'),
   timeframe: varchar('timeframe', { length: 50 }),
+  preferredContact: varchar('preferred_contact', { length: 50 }),
   message: text('message').notNull(),
   createdAt: timestamp('created_at').defaultNow().notNull(),
 });

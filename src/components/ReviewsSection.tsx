@@ -21,7 +21,7 @@ const placeholderReviews = [
     rating: 5,
     text: "We had emergency roof repairs done and they came out the same day! Fixed the leak quickly and cleaned up perfectly. Very impressed with their service.",
     date: "1 month ago",
-    location: "Quispamsis, NB"
+    location: "Southern New Brunswick"
   },
   {
     id: 3,
