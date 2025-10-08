@@ -475,7 +475,7 @@ export default function Home() {
             <section id="home" className="hero-bg min-h-screen flex items-center justify-center pt-20">
                 <div className="bg-black/50 p-8 md:p-12 rounded-lg text-center shadow-2xl max-w-4xl">
                     <div className="text-orange-500 font-bold text-xl md:text-2xl mb-4">#BetterCallPaul</div>
-                    <h1 className="text-5xl md:text-7xl font-extrabold text-zinc-50 mb-6" style={{ letterSpacing: '-0.05em', lineHeight: '1.1' }}>
+                    <h1 className="text-4xl md:text-5xl font-extrabold text-zinc-50 mb-6" style={{ letterSpacing: '-0.05em', lineHeight: '1.1' }}>
                         READY TO PROTECT YOUR BIGGEST INVESTMENT?
                     </h1>
                     <p className="text-lg md:text-xl text-zinc-300 mb-2">
