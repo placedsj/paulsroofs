@@ -260,7 +260,7 @@ export default function VisualizerPage() {
                     <div className="flex justify-between items-center py-4">
                         <a href="/" className="h-12 flex items-center hover:opacity-80 transition-opacity">
                             <Image
-                                src="/assets/paulslogo.png"
+                                src="/assets/paulslogo-official.png"
                                 alt="Paul's Roofing Logo"
                                 width={180}
                                 height={48}

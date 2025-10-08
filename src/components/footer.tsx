@@ -7,7 +7,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <Image
-            src="/assets/paulslogo.png"
+            src="/assets/paulslogo-official.png"
             alt="Paul's Roofing Logo"
             width={150}
             height={40}

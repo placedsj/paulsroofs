@@ -9,7 +9,7 @@ export function Header() {
           <div className="h-12 flex items-center">
             <Link href="/" className="hover:opacity-80 transition-opacity">
               <Image
-                src="/assets/paulslogo.png"
+                src="/assets/paulslogo-official.png"
                 alt="Paul's Roofing Logo"
                 width={180}
                 height={48}

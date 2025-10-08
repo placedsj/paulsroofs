@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { ContactForm } from '@/components/ContactForm';
 import { ReviewsSection } from '@/components/ReviewsSection';
 import { StatsSection } from '@/components/StatsSection';
+import { ProjectGallery } from '@/components/ProjectGallery';
 
 // Since this is a single file, we define all components here.
 
@@ -388,7 +389,7 @@ const BossQuarters = ({ onLogout }: {onLogout: () => void}) => {
             <footer className="mt-12 w-full max-w-5xl text-center text-white text-lg p-4 rounded-lg shadow-lg" style={{ backgroundColor: ACCENT_BLUE }}>
                 <div className="flex justify-center mb-2">
                     <Image
-                        src="/assets/paulslogo.png"
+                        src="/assets/paulslogo-official.png"
                         alt="Paul's Roofing Logo"
                         width={150}
                         height={40}
@@ -446,7 +447,7 @@ export default function Home() {
                     <div className="flex justify-between items-center py-4">
                         <div className="h-12 flex items-center">
                             <Image
-                                src="/assets/paulslogo.png"
+                                src="/assets/paulslogo-official.png"
                                 alt="Paul's Roofing Logo"
                                 width={180}
                                 height={48}
@@ -546,6 +547,9 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+
+            {/* Project Gallery */}
+            <ProjectGallery />
 
             {/* Reviews Section */}
             <ReviewsSection />
@@ -647,7 +651,7 @@ export default function Home() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center">
                         <Image
-                            src="/assets/paulslogo.png"
+                            src="/assets/paulslogo-official.png"
                             alt="Paul's Roofing Logo"
                             width={180}
                             height={48}
