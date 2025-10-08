@@ -457,15 +457,14 @@ export default function Home() {
                         <div className="hidden md:flex space-x-8">
                             <a href="#home" className="text-zinc-400 hover:text-zinc-50 transition-colors">HOME</a>
                             <a href="#services" className="text-zinc-400 hover:text-zinc-50 transition-colors">SERVICES</a>
-                            <a href="/materials" className="text-zinc-400 hover:text-zinc-50 transition-colors">MATERIALS</a>
+                            <a href="/materials" className="text-zinc-400 hover:text-zinc-50 transition-colors">MATERIALS GUIDE</a>
                             <a href="/handbook" className="text-zinc-400 hover:text-zinc-50 transition-colors">HANDBOOK</a>
-                            <a href="#about" className="text-zinc-400 hover:text-zinc-50 transition-colors">ABOUT</a>
                             <a href="#contact" className="text-zinc-400 hover:text-zinc-50 transition-colors">CONTACT</a>
                             <button 
                                 onClick={() => setShowBossQuarters(true)}
-                                className="text-zinc-400 hover:text-zinc-50 transition-colors"
+                                className="px-4 py-1 rounded border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-colors text-sm font-bold"
                             >
-                                BOSS QUARTERS
+                                STAFF
                             </button>
                         </div>
                     </div>

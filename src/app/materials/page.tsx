@@ -148,9 +148,9 @@ export default function MaterialsGuide() {
             <h2 className="text-4xl font-bold text-zinc-50 mb-4">
               METAL ROOFING: LOCAL & DURABLE
             </h2>
-            <p className="text-2xl font-bold text-orange-500 mb-4">Community Metal New Brunswick</p>
+            <p className="text-2xl font-bold text-orange-500 mb-4">Community Metal New Brunswick & Dairytown Exteriors</p>
             <p className="text-lg text-zinc-300 max-w-3xl mx-auto">
-              Built in New Brunswick, for New Brunswick weather. Our partnership with Community Metal ensures you get 
+              Built in New Brunswick, for New Brunswick weather. Our partnerships with Community Metal and Dairytown Exteriors (Sussex) ensure you get 
               premium metal roofing designed specifically for our coastal climate.
             </p>
           </div>
@@ -227,10 +227,10 @@ export default function MaterialsGuide() {
             <h2 className="text-4xl font-bold text-zinc-50 mb-4">
               SIDING & EXTERIORS
             </h2>
-            <p className="text-2xl font-bold text-orange-500 mb-4">Mitten Siding & Dairytown Exteriors</p>
+            <p className="text-2xl font-bold text-orange-500 mb-4">Mitten Siding</p>
             <p className="text-lg text-zinc-300 max-w-3xl mx-auto">
               Complete your home's exterior with premium Mitten vinyl siding. Low maintenance, high curb appeal, 
-              sourced locally through our trusted partner Dairytown Exteriors.
+              sourced locally for quality you can trust.
             </p>
           </div>
 

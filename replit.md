@@ -20,8 +20,8 @@ RoofRight is a comprehensive web application for Paul's Roofing, a metal roofing
 **October 8, 2025 - Branding & Materials Guide Enhancement**
 - **REPLACED VISUALIZER** with comprehensive "Paul's Guide to Premium Materials" page
   - IKO Dynasty Shingles section with features, color palettes, and warranty comparison charts
-  - Community Metal New Brunswick section with profile options and metal vs shingles comparison
-  - Mitten Siding & Dairytown Exteriors section highlighting benefits
+  - Community Metal New Brunswick & Dairytown Exteriors (Sussex) section with profile options and metal vs shingles comparison
+  - Mitten Siding section highlighting benefits
   - Supply Partners section (Kent.ca & HomeDepot.ca) emphasizing reliable supply chain
 - Implemented brand taglines: #BetterCallPaul, #35YearsStrong, "Will yours be next?", "Old school workers, new school work"
 - Replaced all logos with official Paul's Roofing logo (dark blue with house icon)
@@ -32,6 +32,9 @@ RoofRight is a comprehensive web application for Paul's Roofing, a metal roofing
 - Changed CTA button text to "WILL YOURS BE NEXT?"
 - Updated all regional references from Quispamsis to Southern New Brunswick
 - Added ReviewsSection with placeholder customer testimonials and Facebook/review links
+- **Updated navigation structure:** Moved LIGHTS and INSPECTION to footer only (not in header)
+- **Updated header/footer backgrounds** to match logo color (dark blue #0a1628)
+- **Updated exterior inspection page:** Removed "free" from visual inspections; added "Coming Soon 2026" for aerial inspections with heat loss detection
 
 **October 7, 2025 - Vercel to Replit Migration**
 - Migrated project from Vercel to Replit environment
