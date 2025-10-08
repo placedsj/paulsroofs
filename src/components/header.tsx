@@ -17,27 +17,27 @@ export function Header() {
               />
             </Link>
           </div>
-          <div className="hidden md:flex space-x-6 items-center">
-            <Link href="/" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">
+          <div className="hidden md:flex space-x-4 items-center">
+            <Link href="/" className="px-4 py-2 rounded border-2 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white transition-colors font-bold">
               HOME
             </Link>
-            <Link href="/#services" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">
+            <Link href="/#services" className="px-4 py-2 rounded border-2 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white transition-colors font-bold">
               SERVICES
             </Link>
-            <Link href="/materials" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">
+            <Link href="/materials" className="px-4 py-2 rounded border-2 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white transition-colors font-bold">
               MATERIALS GUIDE
             </Link>
-            <Link href="/handbook" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">
+            <Link href="/handbook" className="px-4 py-2 rounded border-2 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white transition-colors font-bold">
               HANDBOOK
             </Link>
-            <Link href="/#contact" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">
+            <Link href="/#contact" className="px-4 py-2 rounded border-2 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white transition-colors font-bold">
               CONTACT
             </Link>
             
             {/* STAFF LINK - Leads to the secure Boss Quarters page */}
             <Link 
               href="/boss-quarters" 
-              className="text-xs font-bold text-orange-500 hover:text-orange-400 px-2 py-1 border-2 border-orange-500 rounded-lg transition-colors"
+              className="px-4 py-2 rounded border-2 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white transition-colors font-bold"
             >
               STAFF
             </Link>

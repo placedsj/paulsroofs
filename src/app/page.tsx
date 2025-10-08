@@ -454,15 +454,15 @@ export default function Home() {
                                 className="h-16 w-auto"
                             />
                         </div>
-                        <div className="hidden md:flex space-x-8">
-                            <a href="#home" className="text-zinc-400 hover:text-zinc-50 transition-colors">HOME</a>
-                            <a href="#services" className="text-zinc-400 hover:text-zinc-50 transition-colors">SERVICES</a>
-                            <a href="/materials" className="text-zinc-400 hover:text-zinc-50 transition-colors">MATERIALS GUIDE</a>
-                            <a href="/handbook" className="text-zinc-400 hover:text-zinc-50 transition-colors">HANDBOOK</a>
-                            <a href="#contact" className="text-zinc-400 hover:text-zinc-50 transition-colors">CONTACT</a>
+                        <div className="hidden md:flex space-x-4">
+                            <a href="#home" className="px-4 py-2 rounded border-2 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white transition-colors font-bold">HOME</a>
+                            <a href="#services" className="px-4 py-2 rounded border-2 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white transition-colors font-bold">SERVICES</a>
+                            <a href="/materials" className="px-4 py-2 rounded border-2 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white transition-colors font-bold">MATERIALS GUIDE</a>
+                            <a href="/handbook" className="px-4 py-2 rounded border-2 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white transition-colors font-bold">HANDBOOK</a>
+                            <a href="#contact" className="px-4 py-2 rounded border-2 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white transition-colors font-bold">CONTACT</a>
                             <button 
                                 onClick={() => setShowBossQuarters(true)}
-                                className="px-4 py-1 rounded border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-colors text-sm font-bold"
+                                className="px-4 py-2 rounded border-2 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white transition-colors font-bold"
                             >
                                 STAFF
                             </button>
@@ -474,17 +474,17 @@ export default function Home() {
             {/* Hero Section - The top banner in the image */}
             <section id="home" className="hero-bg min-h-screen flex items-center justify-center pt-20">
                 <div className="bg-black/50 p-8 md:p-12 rounded-lg text-center shadow-2xl max-w-4xl">
-                    <div className="text-orange-500 font-bold text-xl md:text-2xl mb-4">#BetterCallPaul</div>
+                    <div className="text-teal-500 font-bold text-xl md:text-2xl mb-4">#BetterCallPaul</div>
                     <h1 className="text-4xl md:text-5xl font-extrabold text-zinc-50 mb-6" style={{ letterSpacing: '-0.05em', lineHeight: '1.1' }}>
                         READY TO PROTECT YOUR BIGGEST INVESTMENT?
                     </h1>
                     <p className="text-lg md:text-xl text-zinc-300 mb-2">
-                        Southern New Brunswick's one-stop for metal roofing, shingles, and solar.
+                        Southern New Brunswick's one-stop for metal roofing and shingles.
                     </p>
                     <p className="text-xl md:text-2xl font-bold text-zinc-50 mb-8">
                         Trusted for over 35 years.
                     </p>
-                    <p className="text-lg text-orange-400 font-semibold mb-8">
+                    <p className="text-lg text-teal-400 font-semibold mb-8">
                         Will yours be next?
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
