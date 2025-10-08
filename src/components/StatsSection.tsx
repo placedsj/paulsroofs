@@ -11,7 +11,7 @@ export function StatsSection() {
           <h3 className="text-3xl md:text-4xl font-bold text-zinc-50 mb-4">
             Old School Workers, New School Work
           </h3>
-          <p className="text-2xl font-bold text-orange-500">#35YearsStrong</p>
+          <p className="text-2xl font-bold" style={{ color: '#1E54A3' }}>#35YearsStrong</p>
         </div>
 
         {/* Stats Grid */}
@@ -83,7 +83,7 @@ export function StatsSection() {
             For three decades, we've been the trusted name in roofing for Southern New Brunswick.
           </p>
           <p className="text-xl text-zinc-400">
-            We don't just build roofs; <span className="text-orange-500 font-bold">we build relationships.</span>
+            We don't just build roofs; <span className="font-bold" style={{ color: '#1E54A3' }}>we build relationships.</span>
           </p>
         </div>
       </div>

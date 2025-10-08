@@ -17,17 +17,18 @@ export function Footer() {
             Southern New Brunswick's Premier Metal Roofing Specialist
           </p>
           <div className="flex justify-center space-x-6 mb-4">
-            <Link href="/" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">HOME</Link>
-            <Link href="/exterior-inspection" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">INSPECTION</Link>
-            <Link href="/christmas-lights" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">🎄 LIGHTS</Link>
-            <Link href="/handbook" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">RESOURCES</Link> 
-            <Link href="/boss-quarters" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">STAFF</Link>
+            <Link href="/" className="text-zinc-400 hover:text-blue-600 transition-colors text-sm">HOME</Link>
+            <Link href="/exterior-inspection" className="text-zinc-400 hover:text-blue-600 transition-colors text-sm">INSPECTION</Link>
+            <Link href="/christmas-lights" className="text-zinc-400 hover:text-blue-600 transition-colors text-sm">🎄 LIGHTS</Link>
+            <Link href="/handbook" className="text-zinc-400 hover:text-blue-600 transition-colors text-sm">RESOURCES</Link> 
+            <Link href="/boss-quarters" className="text-zinc-400 hover:text-blue-600 transition-colors text-sm">STAFF</Link>
           </div>
           <p className="text-zinc-400 mb-2">
             Contact:{" "}
             <a
-              href="mailto:info@paulroofs.com" // 🛠️ UPDATED EMAIL
-              className="underline hover:text-orange-500"
+              href="mailto:info@paulroofs.com"
+              className="underline"
+              style={{ color: '#1E54A3' }}
             >
               info@paulroofs.com
             </a>

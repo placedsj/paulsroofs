@@ -475,7 +475,7 @@ export default function Home() {
             {/* Hero Section - The top banner in the image */}
             <section id="home" className="hero-bg min-h-screen flex items-center justify-center pt-20">
                 <div className="bg-black/50 p-8 md:p-12 rounded-lg text-center shadow-2xl max-w-4xl">
-                    <div className="text-cyan-400 font-bold text-xl md:text-2xl mb-4">#BetterCallPaul</div>
+                    <div className="font-bold text-xl md:text-2xl mb-4" style={{ color: '#1E54A3' }}>#BetterCallPaul</div>
                     <h1 className="text-4xl md:text-5xl font-extrabold text-zinc-50 mb-6" style={{ letterSpacing: '-0.05em', lineHeight: '1.1' }}>
                         READY TO PROTECT YOUR BIGGEST INVESTMENT?
                     </h1>
@@ -485,7 +485,7 @@ export default function Home() {
                     <p className="text-xl md:text-2xl font-bold text-zinc-50 mb-8">
                         Trusted for over 35 years.
                     </p>
-                    <p className="text-lg text-cyan-400 font-semibold mb-8">
+                    <p className="text-lg font-semibold mb-8" style={{ color: '#1E54A3' }}>
                         Will yours be next?
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
