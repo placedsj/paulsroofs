@@ -455,14 +455,15 @@ export default function Home() {
                             />
                         </div>
                         <div className="hidden md:flex space-x-4">
-                            <a href="#home" className="px-4 py-2 rounded border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white transition-colors font-bold">HOME</a>
-                            <a href="#services" className="px-4 py-2 rounded border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white transition-colors font-bold">SERVICES</a>
-                            <a href="/materials" className="px-4 py-2 rounded border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white transition-colors font-bold">MATERIALS GUIDE</a>
-                            <a href="/handbook" className="px-4 py-2 rounded border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white transition-colors font-bold">HANDBOOK</a>
-                            <a href="#contact" className="px-4 py-2 rounded border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white transition-colors font-bold">CONTACT</a>
+                            <a href="#home" className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90" style={{ backgroundColor: '#1E54A3' }}>HOME</a>
+                            <a href="#services" className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90" style={{ backgroundColor: '#1E54A3' }}>SERVICES</a>
+                            <a href="/materials" className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90" style={{ backgroundColor: '#1E54A3' }}>MATERIALS GUIDE</a>
+                            <a href="/handbook" className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90" style={{ backgroundColor: '#1E54A3' }}>HANDBOOK</a>
+                            <a href="#contact" className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90" style={{ backgroundColor: '#1E54A3' }}>CONTACT</a>
                             <button 
                                 onClick={() => setShowBossQuarters(true)}
-                                className="px-4 py-2 rounded border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white transition-colors font-bold"
+                                className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90"
+                                style={{ backgroundColor: '#1E54A3' }}
                             >
                                 STAFF
                             </button>

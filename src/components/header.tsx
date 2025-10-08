@@ -18,26 +18,27 @@ export function Header() {
             </Link>
           </div>
           <div className="hidden md:flex space-x-4 items-center">
-            <Link href="/" className="px-4 py-2 rounded border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white transition-colors font-bold">
+            <Link href="/" className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90" style={{ backgroundColor: '#1E54A3' }}>
               HOME
             </Link>
-            <Link href="/#services" className="px-4 py-2 rounded border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white transition-colors font-bold">
+            <Link href="/#services" className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90" style={{ backgroundColor: '#1E54A3' }}>
               SERVICES
             </Link>
-            <Link href="/materials" className="px-4 py-2 rounded border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white transition-colors font-bold">
+            <Link href="/materials" className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90" style={{ backgroundColor: '#1E54A3' }}>
               MATERIALS GUIDE
             </Link>
-            <Link href="/handbook" className="px-4 py-2 rounded border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white transition-colors font-bold">
+            <Link href="/handbook" className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90" style={{ backgroundColor: '#1E54A3' }}>
               HANDBOOK
             </Link>
-            <Link href="/#contact" className="px-4 py-2 rounded border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white transition-colors font-bold">
+            <Link href="/#contact" className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90" style={{ backgroundColor: '#1E54A3' }}>
               CONTACT
             </Link>
             
             {/* STAFF LINK - Leads to the secure Boss Quarters page */}
             <Link 
               href="/boss-quarters" 
-              className="px-4 py-2 rounded border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white transition-colors font-bold"
+              className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90"
+              style={{ backgroundColor: '#1E54A3' }}
             >
               STAFF
             </Link>
