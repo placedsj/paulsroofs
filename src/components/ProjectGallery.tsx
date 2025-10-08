@@ -16,6 +16,30 @@ export function ProjectGallery() {
       title: "Classic Silver Metal Roofing",
       image: "/metal-roof-silver.png",
       description: "Durable metal roofing with superior weather protection"
+    },
+    {
+      id: 3,
+      title: "Modern Residential Project",
+      image: "/IMG_20250927_235341_741.jpg",
+      description: "Complete roofing solution for modern homes"
+    },
+    {
+      id: 4,
+      title: "Quality Workmanship",
+      image: "/IMG_20250927_235341_771.jpg",
+      description: "Expert installation with attention to detail"
+    },
+    {
+      id: 5,
+      title: "Professional Installation",
+      image: "/IMG_20250927_235510_845.jpg",
+      description: "Trusted by homeowners across Southern NB"
+    },
+    {
+      id: 6,
+      title: "Superior Roofing Solutions",
+      image: "/IMG_20250927_235510_860.jpg",
+      description: "Built to last with premium materials"
     }
   ];
 
@@ -27,7 +51,7 @@ export function ProjectGallery() {
           <p className="text-xl text-zinc-400">A look at some of the high-quality roofing projects we've completed across Southern New Brunswick</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div
               key={project.id}
@@ -38,6 +62,7 @@ export function ProjectGallery() {
                   src={project.image}
                   alt={project.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-90 group-hover:opacity-95 transition-opacity"></div>

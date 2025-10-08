@@ -17,6 +17,17 @@ RoofRight is a comprehensive web application for Paul's Roofing, a metal roofing
 
 ## Recent Changes
 
+**October 8, 2025 - Branding & Visual Enhancements**
+- Implemented brand taglines: #BetterCallPaul, #35YearsStrong, "Will yours be next?", "Old school workers, new school work"
+- Replaced all logos with official Paul's Roofing logo (dark blue with house icon)
+- Created StatsSection component showcasing: 35+ Years, 1000+ Roofs, 100% Satisfaction, A+ Quality
+- Added ProjectGallery component with 6 professional project photos from actual completed work
+- Updated hero background with uploaded project photo
+- Enhanced contact form with "Preferred Method of Contact" field (Phone/Email/Text/Any)
+- Changed CTA button text to "WILL YOURS BE NEXT?"
+- Updated all regional references from Quispamsis to Southern New Brunswick
+- Added ReviewsSection with placeholder customer testimonials and Facebook/review links
+
 **October 7, 2025 - Vercel to Replit Migration**
 - Migrated project from Vercel to Replit environment
 - Updated development and production scripts to use port 5000 and bind to 0.0.0.0 for Replit compatibility
