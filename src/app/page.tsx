@@ -445,24 +445,24 @@ export default function Home() {
             <nav className="fixed top-0 left-0 right-0 backdrop-blur-sm border-b border-zinc-700 z-50" style={{ backgroundColor: '#0a1628' }}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center py-4">
-                        <div className="h-16 flex items-center">
+                        <div className="h-20 flex items-center">
                             <Image
                                 src="/assets/paulslogo-official.png"
                                 alt="Paul's Roofing Logo"
-                                width={240}
-                                height={64}
-                                className="h-16 w-auto"
+                                width={300}
+                                height={80}
+                                className="h-20 w-auto"
                             />
                         </div>
                         <div className="hidden md:flex space-x-4">
-                            <a href="#home" className="px-4 py-2 rounded border-2 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white transition-colors font-bold">HOME</a>
-                            <a href="#services" className="px-4 py-2 rounded border-2 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white transition-colors font-bold">SERVICES</a>
-                            <a href="/materials" className="px-4 py-2 rounded border-2 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white transition-colors font-bold">MATERIALS GUIDE</a>
-                            <a href="/handbook" className="px-4 py-2 rounded border-2 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white transition-colors font-bold">HANDBOOK</a>
-                            <a href="#contact" className="px-4 py-2 rounded border-2 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white transition-colors font-bold">CONTACT</a>
+                            <a href="#home" className="px-4 py-2 rounded border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white transition-colors font-bold">HOME</a>
+                            <a href="#services" className="px-4 py-2 rounded border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white transition-colors font-bold">SERVICES</a>
+                            <a href="/materials" className="px-4 py-2 rounded border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white transition-colors font-bold">MATERIALS GUIDE</a>
+                            <a href="/handbook" className="px-4 py-2 rounded border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white transition-colors font-bold">HANDBOOK</a>
+                            <a href="#contact" className="px-4 py-2 rounded border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white transition-colors font-bold">CONTACT</a>
                             <button 
                                 onClick={() => setShowBossQuarters(true)}
-                                className="px-4 py-2 rounded border-2 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white transition-colors font-bold"
+                                className="px-4 py-2 rounded border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white transition-colors font-bold"
                             >
                                 STAFF
                             </button>
@@ -474,7 +474,7 @@ export default function Home() {
             {/* Hero Section - The top banner in the image */}
             <section id="home" className="hero-bg min-h-screen flex items-center justify-center pt-20">
                 <div className="bg-black/50 p-8 md:p-12 rounded-lg text-center shadow-2xl max-w-4xl">
-                    <div className="text-teal-500 font-bold text-xl md:text-2xl mb-4">#BetterCallPaul</div>
+                    <div className="text-cyan-400 font-bold text-xl md:text-2xl mb-4">#BetterCallPaul</div>
                     <h1 className="text-4xl md:text-5xl font-extrabold text-zinc-50 mb-6" style={{ letterSpacing: '-0.05em', lineHeight: '1.1' }}>
                         READY TO PROTECT YOUR BIGGEST INVESTMENT?
                     </h1>
@@ -484,7 +484,7 @@ export default function Home() {
                     <p className="text-xl md:text-2xl font-bold text-zinc-50 mb-8">
                         Trusted for over 35 years.
                     </p>
-                    <p className="text-lg text-teal-400 font-semibold mb-8">
+                    <p className="text-lg text-cyan-400 font-semibold mb-8">
                         Will yours be next?
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">

@@ -9,9 +9,9 @@ export function Footer() {
           <Image
             src="/assets/paulslogo-official.png"
             alt="Paul's Roofing Logo"
-            width={150}
-            height={40}
-            className="h-10 w-auto mx-auto mb-4"
+            width={240}
+            height={64}
+            className="h-16 w-auto mx-auto mb-4"
           />
           <p className="text-zinc-400 mb-4">
             Southern New Brunswick's Premier Metal Roofing Specialist
