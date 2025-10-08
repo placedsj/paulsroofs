@@ -17,30 +17,35 @@ export function Header() {
               />
             </Link>
           </div>
-          <div className="hidden md:flex space-x-8">
-            <Link href="/" className="text-zinc-400 hover:text-orange-500 transition-colors">
+          <div className="hidden md:flex space-x-6 items-center">
+            <Link href="/" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">
               HOME
             </Link>
-            <Link href="/#services" className="text-zinc-400 hover:text-orange-500 transition-colors">
+            <Link href="/#services" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">
               SERVICES
             </Link>
-            <Link href="/visualizer" className="text-zinc-400 hover:text-orange-500 transition-colors">
+            <Link href="/exterior-inspection" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">
+              INSPECTION
+            </Link>
+            <Link href="/christmas-lights" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">
+              🎄 LIGHTS
+            </Link>
+            <Link href="/visualizer" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">
               VISUALIZER
             </Link>
-            <Link href="/handbook" className="text-zinc-400 hover:text-orange-500 transition-colors">
-              RESOURCES 📖
+            <Link href="/handbook" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">
+              HANDBOOK
             </Link>
-            
-            <Link href="/#contact" className="text-zinc-400 hover:text-orange-500 transition-colors">
+            <Link href="/#contact" className="text-zinc-400 hover:text-orange-500 transition-colors text-sm">
               CONTACT
             </Link>
             
             {/* STAFF LINK - Leads to the secure Boss Quarters page */}
             <Link 
               href="/boss-quarters" 
-              className="text-sm font-bold text-orange-500 hover:text-orange-400 px-3 py-2 border-2 border-orange-500 rounded-lg transition-colors"
+              className="text-xs font-bold text-orange-500 hover:text-orange-400 px-2 py-1 border-2 border-orange-500 rounded-lg transition-colors"
             >
-              BOSS QUARTERS 🛠️
+              STAFF
             </Link>
           </div>
         </div>

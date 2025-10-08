@@ -9,6 +9,8 @@ export function ContactForm() {
     name: '',
     email: '',
     phone: '',
+    address: '',
+    timeframe: '',
     message: ''
   });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -32,7 +34,7 @@ export function ContactForm() {
 
       if (response.ok) {
         setStatus('success');
-        setFormData({ name: '', email: '', phone: '', message: '' });
+        setFormData({ name: '', email: '', phone: '', address: '', timeframe: '', message: '' });
         setTimeout(() => setStatus('idle'), 5000); // Reset after 5 seconds
       } else {
         setStatus('error');
@@ -44,7 +46,7 @@ export function ContactForm() {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
@@ -97,6 +99,32 @@ export function ContactForm() {
           disabled={status === 'submitting'}
           className="w-full p-3 bg-zinc-700 border border-zinc-600 rounded text-zinc-100 placeholder-zinc-400 disabled:opacity-50"
         />
+        <input 
+          type="text"
+          name="address"
+          placeholder="Property Address"
+          value={formData.address}
+          onChange={handleChange}
+          required
+          disabled={status === 'submitting'}
+          className="w-full p-3 bg-zinc-700 border border-zinc-600 rounded text-zinc-100 placeholder-zinc-400 disabled:opacity-50"
+        />
+        <select
+          name="timeframe"
+          value={formData.timeframe}
+          onChange={handleChange}
+          required
+          disabled={status === 'submitting'}
+          className="w-full p-3 bg-zinc-700 border border-zinc-600 rounded text-zinc-100 disabled:opacity-50"
+        >
+          <option value="">When do you need this done?</option>
+          <option value="emergency">Emergency - ASAP</option>
+          <option value="soon">Soon - Within 2 weeks</option>
+          <option value="spring">Spring</option>
+          <option value="summer">Summer</option>
+          <option value="fall">Fall</option>
+          <option value="winter">Winter</option>
+        </select>
         <textarea
           name="message"
           placeholder="Describe your roofing needs..."

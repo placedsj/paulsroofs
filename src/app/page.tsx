@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { ContactForm } from '@/components/ContactForm';
+import { ReviewsSection } from '@/components/ReviewsSection';
 
 // Since this is a single file, we define all components here.
 
@@ -535,8 +536,11 @@ export default function Home() {
                 </div>
             </section>
 
+            {/* Reviews Section */}
+            <ReviewsSection />
+
             {/* Contact Section - Retaining the overall structure but with dark theme */}
-            <section id="contact" className="py-20 bg-zinc-800">
+            <section id="contact" className="py-20 bg-zinc-900">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-4xl font-bold text-center text-zinc-50 mb-16">GET IN TOUCH</h2>
                     <div className="grid md:grid-cols-2 gap-12">
