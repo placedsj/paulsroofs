@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useCallback } from 'react';
+import { ContactForm } from '@/components/ContactForm';
 
 // Since this is a single file, we define all components here.
 
@@ -562,38 +563,7 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                        <div className="bg-zinc-900 p-8 rounded-lg border border-zinc-700 shadow-xl">
-                            <h3 className="text-2xl font-bold text-zinc-50 mb-6">REQUEST A QUOTE</h3>
-                            <form className="space-y-4">
-                                <input 
-                                    type="text" 
-                                    placeholder="Your Name" 
-                                    className="w-full p-3 bg-zinc-700 border border-zinc-600 rounded text-zinc-100 placeholder-zinc-400"
-                                />
-                                <input 
-                                    type="email" 
-                                    placeholder="Your Email" 
-                                    className="w-full p-3 bg-zinc-700 border border-zinc-600 rounded text-zinc-100 placeholder-zinc-400"
-                                />
-                                <input 
-                                    type="tel" 
-                                    placeholder="Your Phone" 
-                                    className="w-full p-3 bg-zinc-700 border border-zinc-600 rounded text-zinc-100 placeholder-zinc-400"
-                                />
-                                <textarea 
-                                    placeholder="Describe your roofing needs..." 
-                                    rows={4}
-                                    className="w-full p-3 bg-zinc-700 border border-zinc-600 rounded text-zinc-100 placeholder-zinc-400"
-                                ></textarea>
-                                <button 
-                                    type="submit"
-                                    className="w-full text-white py-3 rounded font-bold transition-colors hover:opacity-90"
-                                    style={{ backgroundColor: ACCENT_BLUE }}
-                                >
-                                    SEND REQUEST
-                                </button>
-                            </form>
-                        </div>
+                        <ContactForm />
                     </div>
                 </div>
             </section>

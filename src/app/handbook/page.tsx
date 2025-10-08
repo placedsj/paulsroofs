@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
+import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
 // Assuming your blog post data is located here:
 import { posts } from '../../lib/posts'; 
 
