@@ -1,0 +1,3 @@
+[submodule "paulroofs"]
+    path = paulroofs
+    url = https://github.com/placedsj/paulroofs-submodule.git
