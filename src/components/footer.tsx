@@ -17,11 +17,11 @@ export function Footer() {
             Southern New Brunswick's Premier Metal Roofing Specialist
           </p>
           <div className="flex justify-center space-x-4 mb-6">
-            <Link href="/" className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90" style={{ backgroundColor: '#1E54A3' }}>HOME</Link>
-            <Link href="/exterior-inspection" className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90" style={{ backgroundColor: '#1E54A3' }}>INSPECTION</Link>
-            <Link href="/christmas-lights" className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90" style={{ backgroundColor: '#1E54A3' }}>🎄 LIGHTS</Link>
-            <Link href="/handbook" className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90" style={{ backgroundColor: '#1E54A3' }}>RESOURCES</Link> 
-            <Link href="/boss-quarters" className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90" style={{ backgroundColor: '#1E54A3' }}>STAFF</Link>
+            <Link href="/" className="px-4 py-2 rounded-lg text-white font-bold transition-all hover:bg-[#1E54A3]/20" style={{ border: '2px solid #1E54A3' }}>HOME</Link>
+            <Link href="/exterior-inspection" className="px-4 py-2 rounded-lg text-white font-bold transition-all hover:bg-[#1E54A3]/20" style={{ border: '2px solid #1E54A3' }}>INSPECTION</Link>
+            <Link href="/christmas-lights" className="px-4 py-2 rounded-lg text-white font-bold transition-all hover:bg-[#1E54A3]/20" style={{ border: '2px solid #1E54A3' }}>🎄 LIGHTS</Link>
+            <Link href="/handbook" className="px-4 py-2 rounded-lg text-white font-bold transition-all hover:bg-[#1E54A3]/20" style={{ border: '2px solid #1E54A3' }}>RESOURCES</Link> 
+            <Link href="/boss-quarters" className="px-4 py-2 rounded-lg text-white font-bold transition-all hover:bg-[#1E54A3]/20" style={{ border: '2px solid #1E54A3' }}>STAFF</Link>
           </div>
           <p className="text-zinc-400 mb-2">
             Contact:{" "}
