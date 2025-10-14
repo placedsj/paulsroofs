@@ -497,15 +497,15 @@ export default function Home() {
                             />
                         </div>
                         <div className="hidden md:flex space-x-4">
-                            <a href="#home" className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90" style={{ backgroundColor: '#1E54A3' }}>HOME</a>
-                            <a href="#services" className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90" style={{ backgroundColor: '#1E54A3' }}>SERVICES</a>
-                            <a href="/materials" className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90" style={{ backgroundColor: '#1E54A3' }}>MATERIALS GUIDE</a>
-                            <a href="/handbook" className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90" style={{ backgroundColor: '#1E54A3' }}>HANDBOOK</a>
-                            <a href="#contact" className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90" style={{ backgroundColor: '#1E54A3' }}>CONTACT</a>
+                            <a href="#home" className="px-4 py-2 rounded-lg text-white font-bold transition-all hover:bg-[#1E54A3]/20" style={{ border: '2px solid #1E54A3' }}>HOME</a>
+                            <a href="#services" className="px-4 py-2 rounded-lg text-white font-bold transition-all hover:bg-[#1E54A3]/20" style={{ border: '2px solid #1E54A3' }}>SERVICES</a>
+                            <a href="/materials" className="px-4 py-2 rounded-lg text-white font-bold transition-all hover:bg-[#1E54A3]/20" style={{ border: '2px solid #1E54A3' }}>MATERIALS GUIDE</a>
+                            <a href="/handbook" className="px-4 py-2 rounded-lg text-white font-bold transition-all hover:bg-[#1E54A3]/20" style={{ border: '2px solid #1E54A3' }}>HANDBOOK</a>
+                            <a href="#contact" className="px-4 py-2 rounded-lg text-white font-bold transition-all hover:bg-[#1E54A3]/20" style={{ border: '2px solid #1E54A3' }}>CONTACT</a>
                             <button 
                                 onClick={() => setShowBossQuarters(true)}
-                                className="px-4 py-2 rounded-lg text-white font-bold transition-colors hover:opacity-90"
-                                style={{ backgroundColor: '#1E54A3' }}
+                                className="px-4 py-2 rounded-lg text-white font-bold transition-all hover:bg-[#1E54A3]/20"
+                                style={{ border: '2px solid #1E54A3' }}
                             >
                                 STAFF
                             </button>
@@ -533,8 +533,8 @@ export default function Home() {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
                         <a 
                             href="tel:+15062714162" 
-                            className="text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors hover:opacity-90"
-                            style={{ backgroundColor: ACCENT_BLUE }}
+                            className="text-white px-8 py-4 rounded-lg font-bold text-lg transition-all hover:bg-[#1E54A3]/20"
+                            style={{ border: '2px solid #1E54A3' }}
                         >
                             GET A QUOTE
                         </a>
