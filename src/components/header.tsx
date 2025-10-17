@@ -6,23 +6,20 @@ export function Header() {
     <nav className="sticky top-0 left-0 right-0 backdrop-blur-sm border-b border-zinc-700 z-50" style={{ backgroundColor: '#0a1628' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="h-28 flex items-center">
+          <div className="h-36 flex items-center">
             <Link href="/" className="hover:opacity-80 transition-opacity">
               <Image
                 src="/assets/paulslogo-official.png"
                 alt="Paul's Roofing Logo"
-                width={420}
-                height={112}
-                className="h-28 w-auto"
+                width={560}
+                height={150}
+                className="h-36 w-auto"
               />
             </Link>
           </div>
           <div className="hidden md:flex space-x-4 items-center">
             <Link href="/" className="px-4 py-2 rounded-lg text-white font-bold transition-all hover:bg-[#1E54A3]/20" style={{ border: '2px solid #1E54A3' }}>
               HOME
-            </Link>
-            <Link href="/#services" className="px-4 py-2 rounded-lg text-white font-bold transition-all hover:bg-[#1E54A3]/20" style={{ border: '2px solid #1E54A3' }}>
-              SERVICES
             </Link>
             <Link href="/materials" className="px-4 py-2 rounded-lg text-white font-bold transition-all hover:bg-[#1E54A3]/20" style={{ border: '2px solid #1E54A3' }}>
               MATERIALS GUIDE
@@ -33,8 +30,6 @@ export function Header() {
             <Link href="/#contact" className="px-4 py-2 rounded-lg text-white font-bold transition-all hover:bg-[#1E54A3]/20" style={{ border: '2px solid #1E54A3' }}>
               CONTACT
             </Link>
-            
-            {/* STAFF LINK - Leads to the secure Boss Quarters page */}
             <Link 
               href="/boss-quarters" 
               className="px-4 py-2 rounded-lg text-white font-bold transition-all hover:bg-[#1E54A3]/20"
