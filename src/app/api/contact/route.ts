@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { db } from '@/lib/db';
+import { getDb } from '@/lib/db';
 import { contactSubmissions } from '@/lib/schema';
 import { sendEmail } from '@/utils/replitmail';
 
@@ -17,6 +17,7 @@ export async function POST(request: Request) {
     }
 
     // Save to database
+    const { db } = getDb();
     const [submission] = await db.insert(contactSubmissions).values({
       name,
       email,

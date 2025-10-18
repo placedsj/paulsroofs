@@ -28,7 +28,7 @@ Project-specific conventions & patterns
 - App Router + Server Actions:
   - API routes use files like `src/app/api/<name>/route.ts`. They return NextResponse objects. See `src/app/api/contact/route.ts` for an example that inserts into the Drizzle table and calls `sendEmail`.
 - Database usage:
-  - `src/lib/db.ts` exports `db` (drizzle client) and `pool`. Use `db` and tables defined in `src/lib/schema.ts` for typed queries.
+  - `src/lib/db.ts` exports `getDb()` function for lazy database connections. Use `const { db } = getDb()` and tables defined in `src/lib/schema.ts` for typed queries.
   - Schema file: `src/lib/schema.ts` defines tables (pgTable/columns). Use Drizzle patterns (insert(...).values(...).returning()) as in the contact route.
   - Current schema: `contactSubmissions` table with fields: id, name, email, phone, address, timeframe, preferredContact, message, createdAt.
 - Email sending:
@@ -53,8 +53,8 @@ Integration points & cross-component flows
   - The repo depends on Genkit packages and has scripts to run the Genkit dev server. Genkit may connect into Next via `@genkit-ai/next`. Check `src/ai/dev.ts` for concrete handlers and available tools.
 
 Quick examples (copyable references)
-- Insert a contact (server): see `src/app/api/contact/route.ts` - uses `db.insert(contactSubmissions).values(...).returning()` and returns a JSON NextResponse.
-- DB client initialization: `src/lib/db.ts` — sets up `neonConfig.webSocketConstructor = ws`, expects `DATABASE_URL`, exports `pool` and `db`.
+- Insert a contact (server): see `src/app/api/contact/route.ts` - uses `const { db } = getDb(); db.insert(contactSubmissions).values(...).returning()` and returns a JSON NextResponse.
+- DB client initialization: `src/lib/db.ts` — sets up `neonConfig.webSocketConstructor = ws`, expects `DATABASE_URL`, exports `getDb()` function for lazy connection.
 - Mail sending: `src/utils/replitmail.ts` — uses a Zod schema `zSmtpMessage`, builds the auth token from `REPL_IDENTITY` or `WEB_REPL_RENEWAL`, and POSTs to Replit connector endpoint.
 - Client component pattern: `src/components/ContactForm.tsx` — uses `"use client"`, useState for form data, fetch to API route, status states for loading/success/error.
 - UI component imports: `import { Card, CardContent } from '@/components/ui/card'; import { Button } from '@/components/ui/button';`
@@ -74,7 +74,7 @@ Code templates (boilerplate)
 - New API route (`src/app/api/<name>/route.ts`):
 ```typescript
 import { NextResponse } from 'next/server';
-import { db } from '@/lib/db';
+import { getDb } from '@/lib/db';
 // import { yourTable } from '@/lib/schema';
 
 export async function POST(request: Request) {
@@ -83,6 +83,7 @@ export async function POST(request: Request) {
     // Validation logic here
     
     // Database operation
+    const { db } = getDb();
     // const result = await db.insert(yourTable).values(body).returning();
     
     return NextResponse.json({ success: true });

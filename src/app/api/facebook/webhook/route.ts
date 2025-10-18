@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { db } from '@/lib/db';
+import { getDb } from '@/lib/db';
 import { contactSubmissions } from '@/lib/schema';
 import { sendEmail } from '@/utils/replitmail';
 
@@ -33,6 +33,7 @@ export async function POST(request: Request) {
       
       // You'll need to fetch the actual lead data using Facebook API
       // For now, we'll create a placeholder entry
+      const { db } = getDb();
       const submission = await db.insert(contactSubmissions).values({
         name: 'Facebook Lead', // Will be replaced with actual data
         email: 'facebook@lead.com', // Will be replaced with actual data
