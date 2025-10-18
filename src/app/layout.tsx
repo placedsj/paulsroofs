@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Roboto, Roboto_Slab } from 'next/font/google';
 import './globals.css';
+import { Footer } from '../components/footer';
 
 const roboto = Roboto({
   weight: ['400', '500'],
@@ -23,13 +24,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: Readonly<{  
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${roboto.variable} ${robotoSlab.variable}`}>
+    <html lang="en" className={`${roboto.variable} ${robotoSlab.variable}`}> 
       <body className={roboto.className}>
         {children}
+        <Footer />
       </body>
     </html>
   );
