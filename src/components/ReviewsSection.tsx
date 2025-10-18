@@ -52,7 +52,7 @@ export function ReviewsSection() {
           {/* Review Links */}
           <div className="flex flex-wrap justify-center gap-4 mt-8">
             <a
-              href="https://www.facebook.com/paulsroofing"
+              href="https://www.facebook.com/profile.php?id=722683144257830"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition-colors flex items-center gap-2"

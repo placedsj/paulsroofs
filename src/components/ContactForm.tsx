@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import { trackQuoteRequest } from './MetaPixel';
 
 const ACCENT_BLUE = '#1E54A3';
 
@@ -35,6 +36,8 @@ export function ContactForm() {
 
       if (response.ok) {
         setStatus('success');
+        // Track successful quote request
+        trackQuoteRequest('website_form');
         setFormData({ name: '', email: '', phone: '', address: '', timeframe: '', preferredContact: '', message: '' });
         setTimeout(() => setStatus('idle'), 5000); // Reset after 5 seconds
       } else {

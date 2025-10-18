@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
+import { trackPhoneCall } from './MetaPixel';
+import { FacebookPagePlugin } from './FacebookPagePlugin';
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -54,7 +56,11 @@ export function Footer() {
             <div>
               <h3 className="text-zinc-200 font-semibold mb-3">Contact</h3>
               <p className="text-zinc-400">
-                Phone: <a href="tel:+15062714162" className="text-white font-bold">(506) 271-4162</a>
+                Phone: <a 
+                  href="tel:+15062714162" 
+                  className="text-white font-bold"
+                  onClick={() => trackPhoneCall()}
+                >(506) 271-4162</a>
               </p>
               <p className="text-zinc-400">
                 Email: <a href="mailto:paul@paulroofs.com" className="text-white underline">paul@paulroofs.com</a>
@@ -62,7 +68,7 @@ export function Footer() {
               <p className="text-zinc-400 mt-2">Hours: Mon–Sat, 8am–6pm</p>
 
               <div className="mt-4 flex space-x-3">
-                <a href="https://www.facebook.com/" aria-label="Facebook" className="p-2 rounded-md bg-[#0d2a47] hover:bg-[#12395f] transition-colors">
+                <a href="https://www.facebook.com/profile.php?id=722683144257830" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="p-2 rounded-md bg-[#0d2a47] hover:bg-[#12395f] transition-colors">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-white"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.99H7.898v-2.888h2.54V9.797c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.242 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.888h-2.33v6.99C18.343 21.128 22 16.991 22 12z"/></svg>
                 </a>
                 <a href="https://www.instagram.com/" aria-label="Instagram" className="p-2 rounded-md bg-[#0d2a47] hover:bg-[#12395f] transition-colors">
@@ -89,6 +95,17 @@ export function Footer() {
                   <div className="h-6 w-10 bg-white/10 rounded flex items-center justify-center text-xs">E</div>
                 </div>
               </div>
+            </div>
+
+            {/* Facebook Page Plugin */}
+            <div className="hidden md:block">
+              <FacebookPagePlugin 
+                pageId="722683144257830"
+                width={300}
+                height={280}
+                showFacepile={true}
+                showPosts={false}
+              />
             </div>
           </div>
 

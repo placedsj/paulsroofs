@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Roboto, Roboto_Slab } from 'next/font/google';
 import './globals.css';
 import { Footer } from '../components/footer';
+import { MetaPixelWrapper } from '../components/MetaPixelWrapper';
 
 const roboto = Roboto({
   weight: ['400', '500'],
@@ -30,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${roboto.variable} ${robotoSlab.variable}`}> 
       <body className={roboto.className}>
+        <MetaPixelWrapper />
         {children}
         <Footer />
       </body>

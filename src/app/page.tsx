@@ -6,6 +6,7 @@ import { ContactForm } from '@/components/ContactForm';
 import { ReviewsSection } from '@/components/ReviewsSection';
 import { StatsSection } from '@/components/StatsSection';
 import { ProjectGallery } from '@/components/ProjectGallery';
+import { trackPhoneCall } from '@/components/MetaPixel';
 
 // Since this is a single file, we define all components here.
 
@@ -535,6 +536,7 @@ export default function Home() {
                             href="tel:+15062714162" 
                             className="text-white px-8 py-4 rounded-lg font-bold text-lg transition-all hover:bg-[#1E54A3]/20"
                             style={{ border: '2px solid #1E54A3' }}
+                            onClick={() => trackPhoneCall()}
                         >
                             GET A QUOTE
                         </a>
