@@ -598,6 +598,95 @@ export default function Home() {
             {/* Reviews Section */}
             <ReviewsSection />
 
+            {/* Payment & Financing Section */}
+            <section id="payment" className="py-20 bg-gradient-to-br from-[#1E54A3] via-[#123865] to-[#0a1628]">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl font-bold text-white mb-4">💳 EASY PAYMENT OPTIONS</h2>
+                        <p className="text-xl text-blue-100">
+                            Protect your home now, pay on your terms
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-8 mb-12">
+                        
+                        {/* Stripe Payment */}
+                        <div className="bg-white/10 backdrop-blur border border-white/20 rounded-lg p-8 text-center">
+                            <div className="bg-[#635BFF] p-4 rounded-lg inline-block mb-6">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="white">
+                                    <path d="M13.976 9.15c-2.172-.806-3.596-1.191-3.596-2.705 0-1.278 1.195-2.041 3.196-2.041 2.007 0 4.014.738 5.238 1.814L22 4.416C20.522 3.268 18.407 2.4 15.976 2.4c-4.014 0-6.196 2.105-6.196 5.417 0 3.146 2.532 3.979 5.461 5.043 2.172.806 3.596 1.191 3.596 2.705 0 1.278-1.195 2.041-3.196 2.041-2.007 0-4.014-.738-5.238-1.814L8 17.584c1.478 1.148 3.593 2.016 6.024 2.016 4.014 0 6.196-2.105 6.196-5.417 0-3.146-2.532-3.979-5.461-5.043-.001 0-.001 0-.001 0z"/>
+                                </svg>
+                            </div>
+                            <h3 className="text-2xl font-bold text-white mb-4">Secure Online Payment</h3>
+                            <div className="text-blue-100 space-y-2 mb-6">
+                                <p>✓ All major credit cards accepted</p>
+                                <p>✓ Bank-level security encryption</p>
+                                <p>✓ Instant payment confirmation</p>
+                                <p>✓ Mobile-friendly checkout</p>
+                            </div>
+                            <a
+                                href="/payment"
+                                className="bg-white text-[#1E54A3] px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-colors shadow-xl inline-block"
+                            >
+                                PAY INVOICE ONLINE
+                            </a>
+                        </div>
+
+                        {/* FinanceIt */}
+                        <div className="bg-white/10 backdrop-blur border border-white/20 rounded-lg p-8 text-center">
+                            <div className="bg-[#00A651] p-4 rounded-lg inline-block mb-6">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="white">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            <h3 className="text-2xl font-bold text-white mb-4">0% Down Financing</h3>
+                            <div className="text-blue-100 space-y-2 mb-6">
+                                <p>✓ No upfront payment required</p>
+                                <p>✓ Competitive interest rates</p>
+                                <p>✓ Quick online application</p>
+                                <p>✓ Flexible payment terms</p>
+                            </div>
+                            <a
+                                href="/payment"
+                                className="bg-[#00A651] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#009944] transition-colors shadow-xl inline-block"
+                            >
+                                APPLY FOR FINANCING
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* Additional Payment Methods */}
+                    <div className="bg-white/5 backdrop-blur border border-white/10 rounded-lg p-8">
+                        <h3 className="text-xl font-semibold text-white mb-6 text-center">Other Payment Methods Accepted</h3>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                            <div className="text-blue-100">
+                                <div className="text-2xl mb-2">💰</div>
+                                <p className="font-semibold">Cash</p>
+                            </div>
+                            <div className="text-blue-100">
+                                <div className="text-2xl mb-2">📝</div>
+                                <p className="font-semibold">Cheque</p>
+                            </div>
+                            <div className="text-blue-100">
+                                <div className="text-2xl mb-2">💸</div>
+                                <p className="font-semibold">E-Transfer</p>
+                            </div>
+                            <div className="text-blue-100">
+                                <div className="text-2xl mb-2">📞</div>
+                                <p className="font-semibold">Phone Payment</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Trust Signal */}
+                    <div className="text-center mt-8">
+                        <p className="text-blue-100 text-lg">
+                            🔒 <strong>Your payment is secure.</strong> Licensed & insured for 35+ years.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
             {/* Contact Section - Retaining the overall structure but with dark theme */}
             <section id="contact" className="py-20 bg-zinc-900">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
