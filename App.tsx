@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import EnterpriseBuilder from './components/EnterpriseBuilder';
 import Handbook from './components/Handbook';
 import ROICalculator from './components/ROICalculator';
@@ -189,8 +190,9 @@ const App: React.FC = () => {
     };
 
     return (
-        <main className="w-full h-screen overflow-hidden font-sans">
-            <Header
+        <>
+            <main className="w-full h-screen overflow-hidden font-sans">
+                <Header
                 onHome={() => setView('landing')}
                 onBuild={() => setView('showroom')}
                 onHandbook={() => setView('handbook')}
@@ -344,7 +346,9 @@ const App: React.FC = () => {
                     <span className="group-hover:rotate-12 transition-transform uppercase font-black text-xs">Help</span>
                 </button>
             </div>
-        </main>
+            </main>
+            <Analytics />
+        </>
     );
 };
 
