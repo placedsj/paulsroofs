@@ -1,5 +1,7 @@
 
 import React, { useState, useMemo, useEffect, useRef } from 'react';
+import { Authenticator, useAuthenticator } from '@aws-amplify/ui-react';
+import { client } from '../lib/amplify';
 import WeatherOverlay from './WeatherOverlay';
 import ShedVisualizer from './ShedVisualizer';
 import {
@@ -108,7 +110,35 @@ const EnterpriseBuilder: React.FC<EnterpriseBuilderProps> = ({ initialStyle = 'M
     const [showROI, setShowROI] = useState(false);
     const [showShare, setShowShare] = useState(false);
     const [showNudge, setShowNudge] = useState(false);
+    const [showLogin, setShowLogin] = useState(false);
     const idleTimer = useRef<NodeJS.Timeout | null>(null);
+
+    const { user } = useAuthenticator((context) => [context.user]);
+
+    const handleSave = async () => {
+        if (!user) {
+            setShowLogin(true);
+            return;
+        }
+
+        try {
+            await client.models.ShedDesign.create({
+                style: spec.style,
+                width: spec.width,
+                depth: spec.depth,
+                wallColor: spec.wallColor,
+                sidingType: spec.sidingType,
+                addonsJson: JSON.stringify(spec.addons),
+                specJson: JSON.stringify(spec),
+                name: `My ${spec.style} - ${new Date().toLocaleDateString()}`
+            });
+            alert('Design saved successfully!');
+            setShowLogin(false);
+        } catch (error) {
+            console.error('Error saving design:', error);
+            alert('Failed to save design. Please try again.');
+        }
+    };
 
     // Smart Nudge Logic
     useEffect(() => {
@@ -547,6 +577,7 @@ Total: $${costs.total.toLocaleString()}
                     <div className="flex gap-4">
                         <button onClick={onBack} className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40 hover:text-white transition-colors bg-white/5 backdrop-blur px-6 py-2 rounded-full border border-white/10">← BACK</button>
                         <button onClick={() => setShowShare(true)} className="text-[10px] font-black uppercase tracking-[0.2em] text-cyan-400 hover:text-white transition-colors bg-cyan-500/10 backdrop-blur px-6 py-2 rounded-full border border-cyan-500/20 hover:bg-cyan-500">SHARE</button>
+                        <button onClick={handleSave} className="text-[10px] font-black uppercase tracking-[0.2em] text-white hover:text-green-400 transition-colors bg-green-500/10 backdrop-blur px-6 py-2 rounded-full border border-green-500/20 hover:bg-green-500/20">SAVE</button>
                     </div>
                     <div className="flex items-center gap-2 bg-black/40 backdrop-blur-2xl border border-white/10 p-1.5 rounded-full">
                         {(['3D', 'BLUEPRINT'] as RenderMode[]).map(m => (
@@ -575,6 +606,34 @@ Total: $${costs.total.toLocaleString()}
                     onClose={() => setShowShare(false)}
                     url={window.location.href}
                 />
+            )}
+
+            {/* Authenticator Modal for Saving */}
+            {showLogin && (
+                <div className="fixed inset-0 z-[300] bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+                    <div className="bg-white rounded-3xl p-8 relative max-w-md w-full">
+                        <button onClick={() => setShowLogin(false)} className="absolute top-4 right-4 text-slate-400 hover:text-slate-900">✕</button>
+                        <Authenticator>
+                            {({ signOut, user }) => {
+                                if (user) {
+                                    // Auto-save once logged in? Or just show user state?
+                                    // For now, let's just show a button to confirm save
+                                    return (
+                                        <div className="text-center">
+                                            <h3 className="text-xl font-bold mb-4 text-slate-900">Welcome, {user.signInDetails?.loginId}</h3>
+                                            <p className="mb-6 text-slate-500">You are signed in. Ready to save your design?</p>
+                                            <div className="flex gap-4 justify-center">
+                                                <button onClick={handleSave} className="bg-blue-600 text-white px-6 py-2 rounded-xl font-bold hover:bg-blue-700">Confirm Save</button>
+                                                <button onClick={signOut} className="text-slate-500 hover:text-slate-900 px-6 py-2">Sign Out</button>
+                                            </div>
+                                        </div>
+                                    );
+                                }
+                                return null;
+                            }}
+                        </Authenticator>
+                    </div>
+                </div>
             )}
 
             {showNudge && (

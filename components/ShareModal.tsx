@@ -18,7 +18,6 @@ const ShareModal: React.FC<ShareModalProps> = ({ onClose, url }) => {
         <div className="fixed inset-0 z-[300] bg-[#020617]/80 backdrop-blur-xl flex items-center justify-center p-6 animate-in fade-in duration-300">
             <div className="bg-slate-900 border border-white/10 p-10 rounded-[3rem] max-w-lg w-full shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-500 to-red-600" />
-
                 <button onClick={onClose} className="absolute top-6 right-8 text-slate-500 hover:text-white transition-colors text-2xl">×</button>
 
                 <div className="text-center mb-10">

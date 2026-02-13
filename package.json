@@ -1,23 +1,33 @@
 {
-  "name": "nexus-builder:-world-edition",
+  "name": "nexus-builder-world-edition",
   "private": true,
   "version": "0.0.0",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "amplify:dev": "npx ampx sandbox",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@aws-amplify/ui-react": "^6.13.2",
     "@google/genai": "^1.38.0",
     "@vercel/analytics": "^1.6.1",
+    "aws-amplify": "^6.16.0",
     "jspdf": "^4.0.0",
+    "lucide-react": "^0.563.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
     "@vitejs/plugin-react": "^5.0.0",
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
     "typescript": "~5.8.2",
     "vite": "^6.2.0"
   }
